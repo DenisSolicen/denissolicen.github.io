@@ -11,9 +11,14 @@
   icon: 'fas fa-envelope'
   noblank: true            # open link in current tab
 -
-  type: rss
-  icon: 'fas fa-rss'
-  noblank: true
+  type: discord
+  icon: 'fa-brands fa-discord'
+  noblank: true 
+  url: 'https://discord.gg/x2YHXwB'
+
+#  type: rss
+#  icon: 'fas fa-rss'
+#  noblank: true
 
 # Uncomment and complete the url below to enable more contact options
 # -
