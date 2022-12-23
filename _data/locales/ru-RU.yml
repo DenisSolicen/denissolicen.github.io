@@ -47,7 +47,7 @@ not_found:
 
 notification:
   update_found: Доступна новая версия контента.
-  update: Обновлять
+  update: Обновить
 
 # ----- Posts related labels -----
 

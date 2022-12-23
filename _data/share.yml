@@ -17,7 +17,12 @@ platforms:
   -
     type: VKontakte
     icon: 'fa-brands fa-vk'
-    link: "https://vk.com/share.php?url=URL"
+    link: "https://vk.com/share.php?url=URL&text=TITLE"
+
+  -
+    type: Поддержать
+    icon: 'fa-solid fa-heart fa-bounce'
+    link: 'https://www.donationalerts.com/r/solicen'
 
   # Uncomment below if you need to.
   # -
