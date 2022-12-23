@@ -27,7 +27,7 @@ description: >-                        # used by seo meta and the atom feed
   Простой сайт работающий на Jekyll & Chirpy Theme.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://solicen.ru/'
+url: 'https://solicen.ru'
 
 github:
   username: denissolicen             # change to your github username
