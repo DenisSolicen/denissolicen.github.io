@@ -18,7 +18,6 @@ platforms:
     type: VKontakte
     icon: 'fa-brands fa-vk'
     link: "https://vk.com/share.php?url=URL&text=TITLE"
-
   -
     type: Поддержать
     icon: 'fa-solid fa-heart fa-bounce'
