@@ -7,14 +7,20 @@
   type: twitter
   icon: 'fab fa-twitter'
 -
-  type: email
-  icon: 'fas fa-envelope'
-  noblank: true            # open link in current tab
--
+ # type: email
+ # icon: 'fas fa-envelope'
+ # noblank: true            # open link in current tab
+
   type: discord
   icon: 'fa-brands fa-discord'
   noblank: true 
   url: 'https://discord.gg/x2YHXwB'
+
+  type: donation
+  icon: 'fa-solid fa-heart'
+  noblank: true
+  url: 'https://www.donationalerts.com/r/solicen'
+
 
 #  type: rss
 #  icon: 'fas fa-rss'

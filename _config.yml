@@ -24,7 +24,8 @@ title: солицен.                          # the main title
 tagline: Переводы и статьи   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Простой сайт работающий на Jekyll & Chirpy Theme.
+  SolicenTEAM | Официальный сайт переводчика Д.Солицена и Команды Солицена. 
+  Содержит архив переводов, и статьи написанные членами команды и Солиценом.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://solicen.ru'
