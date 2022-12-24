@@ -1,0 +1,158 @@
+---
+layout: page
+# The Home page layout
+---
+
+{% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
+{% assign posts = site.posts | where_exp: "item", "item.boxart != null "%}
+
+<!-- Get pinned posts -->
+
+{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
+{% assign pinned_num = pinned.size | minus: offset %}
+
+{% if pinned_num > 0 %}
+  {% for i in (offset..pinned.size) limit: pinned_num %}
+    {% assign posts = posts | push: pinned[i] %}
+  {% endfor %}
+{% else %}
+  {% assign pinned_num = 0 %}
+{% endif %}
+
+<!-- Get default posts -->
+
+{% assign default_beg = offset | minus: pinned.size %}
+
+{% if default_beg < 0 %}
+  {% assign default_beg = 0 %}
+{% endif %}
+
+{% assign default_num = paginator.posts | size | minus: pinned_num  %}
+{% assign default_end = default_beg | plus: default_num | minus: 1 %}
+
+{% if default_num > 0 %}
+  {% for i in (default_beg..default_end) %}
+    {% assign posts = posts | push: default[i] %}
+  {% endfor %}
+{% endif %}
+
+<html>
+  <style>
+    #img {
+      transition: 0.3s;
+      opacity: 100%;
+      position: relative;
+
+    }
+    #img:hover {  
+      transform: scale(1.05); opacity: 80%; filter: grayscale(100%);
+      position: relative;
+    }
+
+
+    .box-card-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, 280px); 
+      gap: 40px;
+      
+    }
+
+    .box-card-div {
+      height: 370px;
+    }
+
+    @media (max-width: 881px) {
+      .box-card-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, 100%); 
+      gap: 40px;
+      
+    }
+     #img {
+      opacity: 100%;
+      filter: grayscale(0%);
+      top: 50%;
+      transform: translateY(-50%);
+     }
+     #img:hover {  
+      opacity: 100%;
+      filter: grayscale(100%);
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+     .box-card-div {
+
+    }
+    }
+
+
+
+  </style>
+</html>
+
+<div id="post-list" class="box-card-grid" style="">
+{% for post in posts %}
+
+  <div class="post-preview" style="padding: 10px;  background-size: cover; ">
+    <div style="overflow: hidden;  border-radius: 10px; cursor: pointer;" class="box-card-div" onclick="location.href='{{post.url}}'" href="{{ post.url | relative_url }}" >
+      <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " id="img">
+    </div>
+
+    <h1 style="margin-top: 5px;">
+      <a href="{{ post.url | relative_url }}" style="color: whitesmoke; font-size: 14px; font-weight: 700;">{{ post.short }}</a>
+    </h1>
+
+    <!--  {% if post.image %}
+    <img src="{{post.image}}" class="rounded-lg mt-2">
+    {% endif %}  -->
+
+    <div class="post-meta text-muted d-flex" style="align-content: center; margin-top: 5px;">
+      <div class="mr-auto">
+
+        <!-- posted date -->
+        <i class="far fa-calendar fa-fw"></i>
+        {% include datetime.html date=post.date %}
+        <!-- categories -->
+
+        {% if post.sub-cat.size > 0 %}
+          <i class="far fa-folder-open fa-fw"></i>
+          <span>
+          {% for category in post.sub-cat %}
+            {{ category }}
+            {%- unless forloop.last -%},{%- endunless -%}
+          {% endfor %}
+          </span>
+        {% endif %}
+
+        {% if post.platforms.size > 0 %}<br>
+
+        <span  style="margin-top: 10px;">
+        {% for platform in post.platforms %}
+            {% if platform == "android"%}
+            <i class="fa-brands fa-android"></i>
+            {% endif %}  
+            {% if platform == "linux"%}
+            <i class="fa-brands fa-linux"></i>
+            {% endif %}
+            {% if platform == "windows"%}
+            <i class="fa-brands fa-windows"></i>
+            {% endif %}
+        {% endfor %}
+        </span>
+      {% endif %}
+      </div>
+
+
+
+    </div> <!-- .post-meta -->
+
+  </div> <!-- .post-review -->
+
+{% endfor %}
+
+</div> <!-- #post-list -->
+
+{% if paginator.total_pages > 0 %}
+  {% include post-paginator.html %}
+{% endif %}
