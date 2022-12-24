@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 # The Home page layout
 ---
 
@@ -54,6 +54,7 @@ layout: page
       display: grid; 
       grid-template-columns: repeat(auto-fill, 280px); 
       gap: 40px;
+      padding-top: 40px;
       
     }
 
@@ -66,6 +67,7 @@ layout: page
       display: grid; 
       grid-template-columns: repeat(auto-fill, 100%); 
       gap: 40px;
+      padding-top: 0px;
       
     }
      #img {
@@ -90,7 +92,6 @@ layout: page
 
   </style>
 </html>
-
 <div id="post-list" class="box-card-grid" style="">
 {% for post in posts %}
 

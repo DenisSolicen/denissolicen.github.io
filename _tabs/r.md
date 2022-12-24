@@ -1,6 +1,6 @@
 ---
 layout: r
-icon: fas fa-tag
+icon: fa-solid fa-language
 order: 0
 title: Переводы
 ---
