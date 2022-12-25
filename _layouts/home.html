@@ -56,6 +56,10 @@ layout: page
     color:rgb(50, 152, 230);
   }
 
+  .category:hover {
+    color:rgb(50, 152, 230);
+  }
+
 </style>
 {% include disqus.html %}
 <div id="post-list">
@@ -92,7 +96,7 @@ layout: page
           <i class="far fa-folder-open fa-fw"></i>
           <span>
           {% for category in post.categories %}
-            <span style="cursor: pointer;" onclick="location.href='/categories/{{category}}'">{{ category }}</span>
+            <span style="cursor: pointer;" class="category" onclick="location.href='/categories/{{category}}'">{{ category }}</span>
             {%- unless forloop.last -%},{%- endunless -%}
           {% endfor %}
           </span>
@@ -118,3 +122,4 @@ layout: page
 {% if paginator.total_pages > 0 %}
   {% include post-paginator.html %}
 {% endif %}
+<script src="/assets/js/disqus.js"></script>
