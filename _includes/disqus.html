@@ -1,5 +1,4 @@
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-        <script type="text/javascript">
+<script type="text/javascript">
 
           String.prototype.endsWith = function (s) {
             return this.length >= s.length && this.substr(this.length - s.length) == s;
@@ -19,19 +18,16 @@
                 2. If you're counting comments from another Disqus shortname on a page where you're using the default comment counting script
             */
 
-            $(document).ready(function () {
+            $(function () {
                 var key = "XrkXWYcSYFsQC74AMA9J37tNXuWbw0PwRl2DZSx3LHfu3pMJMio8Gts9qUAMBAV5";
                 var forum = "solicen";
-                var threads = [];
-                var urls = [];
                 $('.count-comments').each(function (e) {
                     var url = $(this).attr('data-disqus-url');
                     console.log(url);
                     var el = document.getElementById(url);
                     var disqusUrl = 'https://disqus.com/api/3.0/forums/listThreads.json?forum='+encodeURIComponent(forum)+'&api_key='+key+'&limit=100';
                     $.get(disqusUrl).then(function(res) {
-                      res.response.forEach(function(t) {
-                        threads.push(t);   
+                      res.response.forEach(function(t) {  
                         if (t.posts != -1){
                           console.log(t.clean_title + " | комментарии: " + t.posts + "\n");                     
                           if (t.link.endsWith(url)){
