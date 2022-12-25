@@ -107,6 +107,7 @@ GEM
     yell (2.2.2)
 
 PLATFORMS
+  x64-mingw-ucrt
   x86_64-linux
 
 DEPENDENCIES
@@ -118,4 +119,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.4.1
+   2.3.26
