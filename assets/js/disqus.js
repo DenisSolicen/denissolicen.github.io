@@ -21,6 +21,8 @@ String.prototype.endsWith = function (s) {
         var forum = "solicen";
         var urls = [];
 
+       console.log("Fetching comments...")
+
         $('.count-comments').each(function (e) {
             var url = $(this).attr('data-disqus-url');
             urls.push(url);
@@ -33,9 +35,9 @@ String.prototype.endsWith = function (s) {
               if (t.posts != -1){
                 urls.forEach(url => {
                   var el = document.getElementById(url);
-                  if (t.link.endsWith(url)){
+                  if (t.link.endsWith(url)){     
                     el.innerHTML = t.posts;
-                    //console.log(t.clean_title + " | комментарии: " + t.posts + "\n");   
+                    //console.log(t.clean_title + " | комментарии: " + t.posts + "\n");                   
                 }  
                 });                                  
               } 
