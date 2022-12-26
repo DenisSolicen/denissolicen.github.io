@@ -20,7 +20,6 @@ String.prototype.endsWith = function (s) {
         var key = "SyRBH30uqdyxbqzpRcJ96FZFqXP0GjKs3calfHDo4Ln5Gu5i29IfV3CJIFIqPcVC";
         var forum = "solicen";
         var urls = [];
-
        console.log("Fetching comments...")
 
         $('.count-comments').each(function (e) {
@@ -28,20 +27,37 @@ String.prototype.endsWith = function (s) {
             urls.push(url);
         });
 
-        $(function () {
+        let i = setInterval(function() {
+          console.log("Fetching comments...")
+          doCount();
+        }, 360000);
+
+        doCount();
+        function doCount() {
           var disqusUrl = 'https://disqus.com/api/3.0/forums/listThreads.json?forum='+encodeURIComponent(forum)+'&api_key='+key+'&limit=100';
           $.get(disqusUrl).then(function(res) {
             res.response.forEach(function(t) {  
               if (t.posts != -1){
-                urls.forEach(url => {
-                  var el = document.getElementById(url);
-                  if (t.link.endsWith(url)){     
-                    el.innerHTML = t.posts;
-                    //console.log(t.clean_title + " | комментарии: " + t.posts + "\n");                   
-                }  
-                });                                  
+
+                var u = urls.find(x => t.link.endsWith(x));
+                if (u !== undefined){
+                  var el = document.getElementById(u);
+                  var num = Number(t.posts);
+
+                  if (el.innerHTML != t.posts) {
+                    /*
+                    if (el.innerHTML != "0"){                   
+                      if (num != el.innerHTML){
+                        var difference = (num + Number(el.innerHTML)) - Number(el.innerHTML);
+                        console.log("Разница " + difference);
+                      }
+                    }
+                    */
+                  }
+                  el.innerHTML = t.posts;
+                }                                
               } 
             })
           },'json');
-        });
+        };
     });

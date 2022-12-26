@@ -39,29 +39,11 @@ layout: page
 {% endif %}
 
 <style>
-  #comment {
-    color:rgb(108, 117, 125);
-    cursor: pointer;
-    display: inline;
-    transition: 0.05s;
-  }
-  .count-comments{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-    margin-right: -25px;
-    font-weight: 800;
-  }
-  #comment:hover{
-    color:rgb(50, 152, 230);
-  }
-
   .category:hover {
     color:rgb(50, 152, 230);
   }
 
 </style>
-{% include disqus.html %}
 <div id="post-list">
 {% for post in posts %}
     
@@ -110,7 +92,7 @@ layout: page
         <span>{{ site.data.locales[site.lang].post.pin_prompt }}</span>
       </div>
       {% endif %}
-
+      
     </div> <!-- .post-meta -->
 
   </div> <!-- .post-review -->
@@ -122,4 +104,4 @@ layout: page
 {% if paginator.total_pages > 0 %}
   {% include post-paginator.html %}
 {% endif %}
-<script src="/assets/js/disqus.js"></script>
+{% include disqus.html %}
