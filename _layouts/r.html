@@ -42,8 +42,8 @@ layout: default
       transition: 0.3s;
       opacity: 100%;
       position: relative;
-
     }
+
     #img:hover {  
       transform: scale(1.05); opacity: 80%; filter: grayscale(100%); position: relative;
     }
@@ -55,7 +55,7 @@ layout: default
       padding-top: 40px;
     }
 
-    .box-card-div { height: 370px;}
+    .box-card-div { height: 370px; background-color: rgb(33, 34, 37); transition: 0.3s; }
     .box-card-div:hover { background-color: white; }
 
     @media (max-width: 850px) {
@@ -67,7 +67,7 @@ layout: default
         padding-top: 0px;
       
     }
-      .box-card-div { height: 220px; }
+      .box-card-div { height: 220px;}
     }
 
 
@@ -102,7 +102,7 @@ layout: default
 
   <div class="post-preview" style="padding: 10px;  background-size: cover; ">
     <div style="overflow: hidden;  border-radius: 10px; cursor: pointer;" class="box-card-div" onclick="location.href='{{post.url}}'" href="{{ post.url | relative_url }}" >
-      <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " alt="{{post.short}}" id="img">
+       <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " alt="{{post.short}}" id="img">
     </div>
 
     <h1 style="margin-top: 5px;">
