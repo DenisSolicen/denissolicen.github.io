@@ -58,8 +58,15 @@ layout: page
 
     <div class="post-content">
       <p>
-        {% include no-linenos.html content=post.content %}
-        {{ content | markdownify | strip_html | truncate: 200 | escape }}
+        {% if post.text != null %}
+          {% include no-linenos.html content=post.text %}
+          {{ content | markdownify | strip_html | truncate: 200 | escape }}
+        {% endif %}
+
+        {% if post.text == null %}
+          {% include no-linenos.html content=post.content %}
+          {{ content | markdownify | strip_html | truncate: 200 | escape }}
+        {% endif %}
       </p>
     </div>
     <div class="post-meta text-muted d-flex">
@@ -67,6 +74,7 @@ layout: page
         
         <i class="fa-solid fa-comment mr-4" id="comment" onclick="location.href='{{post.url}}#disqus_thread'" >
           <span href="{{post.url}}#disqus_thread" style="font-weight: 700;" class="count-comments" data-disqus-url="{{post.url}}" id="{{post.url}}">0</span>
+          <!-- <span style="font-weight: 700;" class="count-comments-add" id="{{post.url}}|"></span> -->
         </i>
 
         <!-- posted date -->
