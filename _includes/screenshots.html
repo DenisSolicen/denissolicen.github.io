@@ -8,7 +8,7 @@
       {% if image.path contains 'assets/img/gallery/' %}
       {% if image.path contains slug %}
       <a href="{{ image.path }}" class="popup img-link preview-img lazyload">
-        <img src="{{ image.path }}" class="screenshot popup lazyload" alt="Solicen - {{slug}} image">
+        <img src="{{ image.path }}" class="popup lazyload img-c" alt="Solicen - {{slug}} image">
       </a>
 
       {% endif %}
@@ -27,6 +27,16 @@
 {% endif %}
 
 <style>
+
+    .img-c {
+      transition: 0.3s;
+      opacity: 100%;
+      position: relative;
+    }
+    .img-c:hover {  
+      transform: scale(1.05); opacity: 70%; filter: grayscale(10%); position: relative;
+    }
+
   .post-screen::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
   }

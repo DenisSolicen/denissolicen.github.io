@@ -1,7 +1,18 @@
-<iframe class="embed-video youtube lazyload"
-  src="https://www.youtube.com/embed/{{ include.id }}"
-  title="YouTube video player"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+<div class="e-video">
+<lite-youtube videoid="{{ include.id }}" posterquality="maxresdefault" class="embed-video youtube lazyload" style="border-radius: 15px; background-color: rgb(33, 34, 37);">
+</lite-youtube>
+</div>
+
+
+<p style="text-align: center; color: rgb(73, 74, 77);">{{include.alt}}</p>
+<style>
+  .e-video {
+    padding-top: 20px;
+    background-color: rgb(33, 34, 37);
+    transition: 0.3s;
+  }
+  .e-video:hover {
+    opacity: 100%; filter: grayscale(0%);
+  }
+</style>
