@@ -90,6 +90,23 @@ tail_includes:
 
 <div class="post-content">
   {{ content }}
+  {% if page.gallery %}
+    <style>
+        .noScreen {
+          display: none;
+        }
+      @media(max-width: 1050px){
+        .noScreen {
+          display: block;
+          overflow: hidden;
+          height: 500px;
+        }
+      } 
+    </style>
+    <div class="noScreen">
+      {% include small-screen.html %}
+    </div>
+  {% endif %}
 </div>
 
 <div class="post-tail-wrapper text-muted">

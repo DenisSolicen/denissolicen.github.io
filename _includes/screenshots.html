@@ -10,6 +10,7 @@
       <a href="{{ image.path }}" class="popup img-link preview-img lazyload">
         <img src="{{ image.path }}" class="screenshot popup lazyload" alt="Solicen - {{slug}} image">
       </a>
+
       {% endif %}
       {% endif %}
       {% endfor %}
@@ -29,10 +30,14 @@
   .post-screen::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
   }
+  .post-screen:focus {
+    -ms-overflow-style:auto;  /* Internet Explorer 10+ */
+    scrollbar-width: auto;  /* Firefox */
+  }
   .post-screen {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
-    height:320px;
+    height:320px; /* 320px */
     overflow:scroll;
     overflow-x:hidden;
 

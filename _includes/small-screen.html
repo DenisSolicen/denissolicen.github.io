@@ -1,0 +1,45 @@
+{% if page.gallery %}
+  <div class="post">
+    <div class="panel-heading"></div>
+    <ul class="post-content s-screen pl-0 pb-1 ml-1 mt-2">
+      {% if page.gallery %}
+      {% assign slug = page.gallery %}
+      <div class="box-card-grid row">
+      {% for image in site.static_files %}
+      {% if image.path contains 'assets/img/gallery/' %}
+      {% if image.path contains slug %}
+        <div class="box-card-div">
+            <a href="{{ image.path }}" class="popup img-link preview-img lazyload s-image">
+                <img src="{{ image.path }}" class="popup lazyload s-image" alt="Solicen - {{slug}} image">
+              </a>
+        </div>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      </div>
+      {% else %}
+      {% endif %}
+  </ul>
+  </div> <!-- Small-Screenshots -->
+
+{% endif %}
+
+<style>
+.s-image {
+    border-radius: 10px;
+}
+.box-card-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fill,350px); 
+      gap: 20px;
+      padding-top: 20px;
+      justify-content: center;
+    }
+    .box-card-div { transition: 0.3s; justify-content: space-around;  }
+  .s-screen {
+    height:320px; /* 320px */
+    overflow:scroll;
+    overflow-x:hidden;
+    width: 100%;
+  }
+</style>
