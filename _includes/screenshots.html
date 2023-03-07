@@ -5,14 +5,14 @@
       {% if page.gallery %}
       {% assign slug = page.gallery %}
       {% for image in site.static_files %}
-      {% if image.path contains 'assets/img/gallery/'slug %}
+      {% if image.path contains 'assets/img/gallery/' %}
+      {% if image.path contains slug %}
       <a href="{{ image.path }}" class="popup img-link preview-img">
-        <img src="{{ image.path }}" class="screenshot popup img-link" alt="">
+        <img src="{{ image.path }}" class="screenshot popup" alt="">
       </a>
-      
+      {% endif %}
       {% endif %}
       {% endfor %}
-
       {% else %}
       {% for item in page.screenshots %}
       <a class="photoswipe"  href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
