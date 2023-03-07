@@ -1,0 +1,31 @@
+{% assign enable_toc = false %}
+{% if site.toc and page.toc %}
+  {% if page.content contains '<h2' or page.content contains '<h3' %}
+    {% assign enable_toc = true %}
+  {% endif %}
+{% endif %}
+
+{% if enable_toc %}
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="{{ site.data.assets[origin].bootstrap-toc.js | relative_url }}"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading toc pl-3 pt-2 mb-10">{{- site.data.locales[site.lang].panel.toc -}}</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
+{% endif %}
+
+<style>
+    #toc-wrapper{
+        display: block;
+        position: sticky;
+        z-index: 1000000000;
+
+        backdrop-filter: blur(12px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(27, 27, 30, 0.85);
+        padding: 20px;
+        
+
+    }
+</style>

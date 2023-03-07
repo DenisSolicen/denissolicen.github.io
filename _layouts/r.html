@@ -100,9 +100,9 @@ layout: default
 <div id="post-list" class="box-card-grid" style="">
 {% for post in posts %}
 
-  <div class="post-preview" style="padding: 10px;  background-size: cover; ">
+  <div class="post-preview lazyload" style="padding: 10px;  background-size: cover; ">
     <div style="overflow: hidden;  border-radius: 10px; cursor: pointer;" class="box-card-div" onclick="location.href='{{post.url}}'" href="{{ post.url | relative_url }}" >
-       <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " alt="{{post.short}}" id="img">
+       <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " class="lazyload" alt="{{post.short}}" id="img">
     </div>
 
     <h1 style="margin-top: 5px;">

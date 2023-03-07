@@ -1,0 +1,34 @@
+{% if page.gallery %}
+  <div class="post">
+    <div class="panel-heading">Скриншоты</div>
+    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+      {% if page.gallery %}
+      {% assign slug = page.gallery %}
+      {% for image in site.static_files %}
+      {% if image.path contains 'assets/img/gallery/'slug %}
+      <a href="{{ image.path }}" class="popup img-link preview-img">
+        <img src="{{ image.path }}" class="screenshot popup img-link" alt="">
+      </a>
+      
+      {% endif %}
+      {% endfor %}
+
+      {% else %}
+      {% for item in page.screenshots %}
+      <a class="photoswipe"  href="{{ include.url }}" target="_blank" data-pswp-width="{{ include.full_width }}" data-pswp-height="{{ include.full_height }}">
+        <img src="{{item}}" class="screenshot" onclick="location.href='{{item}}'" {{ lqip | strip }}>
+      </a>
+      {% endfor %}
+      {% endif %}
+  </ul>
+  </div> <!-- Screenshots -->
+
+{% endif %}
+
+<style>
+  .screenshot {
+    margin-bottom: 20px;
+    cursor: zoom-in;
+    transition: 0.3s ease, color 0.2s linear;
+  }
+</style>
