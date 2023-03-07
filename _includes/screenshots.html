@@ -1,7 +1,7 @@
 {% if page.gallery %}
   <div class="post">
     <div class="panel-heading">Скриншоты</div>
-    <ul class="post-content pl-0 pb-1 ml-1 mt-2">
+    <ul class="post-content post-screen pl-0 pb-1 ml-1 mt-2">
       {% if page.gallery %}
       {% assign slug = page.gallery %}
       {% for image in site.static_files %}
@@ -26,6 +26,17 @@
 {% endif %}
 
 <style>
+  .post-screen::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  .post-screen {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+    height:320px;
+    overflow:scroll;
+    overflow-x:hidden;
+
+  }
   .screenshot {
     margin-bottom: 20px;
     cursor: zoom-in;
