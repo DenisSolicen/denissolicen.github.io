@@ -1,17 +1,12 @@
-<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+<script src="/assets/js/lite-youtube/lite-yt-embed.js"></script>
+<link rel="stylesheet" href="/assets/js/lite-youtube/lite-yt-embed.css" />
+
 <div class="e-video">
-<lite-youtube videoid="{{ include.id }}" posterquality="maxresdefault" class="embed-video youtube lazyload" style="border-radius: 15px;">
-</lite-youtube>
+  <lite-youtube videoid="{{ include.id }}" class="embed-video youtubelazyload" style="border-radius: 15px; background-image: url('https://i.ytimg.com/vi/{{ include.id }}/maxresdefault.jpg'); ">
+  </lite-youtube>
 </div>
-
-
 <p style="text-align: center; color: rgb(73, 74, 77);">{{include.alt}}</p>
 <style>
-  .e-video {
-    padding-top: 20px;
-    transition: 0.3s;
-  }
-  .e-video:hover {
-    opacity: 100%; filter: grayscale(0%);
-  }
+  .e-video { padding-top: 20px; transition: 0.3s;}
+  .lty-playbtn { opacity: 85%; }
 </style>
