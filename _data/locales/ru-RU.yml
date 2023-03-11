@@ -41,7 +41,8 @@ copyright:
     Публикации на сайте защищены лицензией Creative Commons Attribution 4.0 International (CC BY 4.0),
     если в тексте публикации не указано иное.
 
-meta: Работает на :PLATFORM при помощи :THEME.
+meta: Сайт защищен <a href='https://www.cloudflare.com/'>Cloudflare</a>. <br> Работает на :PLATFORM при помощи :THEME. 
+
 
 not_found:
   statment: Извините, эта ссылка указывает на ресурс который не существует.

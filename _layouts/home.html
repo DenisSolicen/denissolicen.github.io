@@ -66,12 +66,12 @@ layout: page
 <div id="post-list">
 {% for post in posts %}
     
-  <div class="post-preview borderPC" style="  padding-bottom: 25px; padding-top: 25px;">
-    <h1 class="mb-2" style="padding-left: 30px; padding-right: 30px;">
+  <div class="post-preview borderPC" style="  padding-bottom: 20px; padding-top: 20px;"   >
+    <h1 class="mb-2" style="padding-left: 20px; padding-right: 20px;">
       <a style="color:rgb(201, 204, 207); font-size: 22px; font-weight: 700;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h1>
 
-    <div class="post-content" style="padding-left: 30px; padding-right: 30px; font-size: 17px; line-height: 1.45;">
+    <div class="post-content" style="padding-left: 20px; padding-right: 20px; font-size: 17px; line-height: 1.45;">
       <p>
         {% if post.text != null %}
           {% include no-linenos.html content=post.text %}
@@ -97,7 +97,7 @@ layout: page
     </div>
     {% endif %}  
 
-    <div class="post-meta text-muted d-flex" style="padding-left: 30px; padding-right: 30px;">
+    <div class="post-meta text-muted d-flex" style="padding-left: 20px; padding-right: 20px;">
       <div class="mr-auto">
         
         <i class="fa-solid fa-comment mr-4" id="comment" onclick="location.href='{{post.url}}#disqus_thread'" >
@@ -123,7 +123,7 @@ layout: page
       </div>
 
       {% if post.pin %}
-      <div class="pin">
+      <div class="pin" style="background-color: transparent;">
         <i class="fas fa-thumbtack fa-fw"></i>
         <span>{{ site.data.locales[site.lang].post.pin_prompt }}</span>
       </div>
