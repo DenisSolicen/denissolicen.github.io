@@ -1,0 +1,25 @@
+.img-c {
+    transition: 0.3s;
+    opacity: 100%;
+    position: relative;
+}
+
+.img-c:hover {  
+    transform: scale(1.05); opacity: 70%; filter: grayscale(10%); position: relative;
+}
+
+.post-screen::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+.post-screen:focus {
+  -ms-overflow-style:auto;  /* Internet Explorer 10+ */
+  scrollbar-width: auto;  /* Firefox */
+}
+.post-screen {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+  height:320px; /* 320px */
+  overflow:scroll;
+  overflow-x:hidden;
+
+}

@@ -1,0 +1,14 @@
+.download-sol {
+    background-color: rgb(33, 34, 37);
+    margin-bottom: 20px;
+    margin-top: -5px;
+    border-radius: 10px;
+    color: rgb(63, 64, 67);
+    transition: 0.5s;
+}
+.download-sol:hover {
+  color: rgb(63, 64, 67);
+}
+.list-group-item {
+  color: rgb(63, 64, 67);
+}

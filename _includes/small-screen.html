@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/assets/css/small-gallery.css" />
+
 {% if page.gallery %}
   <div class="post">
     <div class="panel-heading"></div>
@@ -10,7 +12,7 @@
       {% if image.path contains slug %}
         <div class="box-card-div">
             <a href="{{ image.path }}" class="popup img-link preview-img lazyload s-image">
-                <img src="{{ image.path }}" class="popup lazyload s-image" alt="Solicen - {{slug}} image">
+                <img src="{{ image.path }}" class="popup lazyload s-image" loading="lazy" alt="Solicen - {{slug}} image">
               </a>
         </div>
       {% endif %}
@@ -23,23 +25,3 @@
   </div> <!-- Small-Screenshots -->
 
 {% endif %}
-
-<style>
-.s-image {
-    border-radius: 10px;
-}
-.box-card-grid {
-      display: grid; 
-      grid-template-columns: repeat(auto-fill,300px); 
-      gap: 20px;
-      padding-top: 20px;
-      justify-content: center;
-    }
-    .box-card-div { transition: 0.3s; justify-content: space-around;  }
-  .s-screen {
-    height:500px; /* 320px */
-    overflow:scroll;
-    overflow-x:hidden;
-    width: 100%;
-  }
-</style>

@@ -1,0 +1,17 @@
+.s-image {
+    border-radius: 10px;
+}
+.box-card-grid {
+      display: grid; 
+      grid-template-columns: repeat(auto-fill,300px); 
+      gap: 20px;
+      padding-top: 20px;
+      justify-content: center;
+    }
+    .box-card-div { transition: 0.3s; justify-content: space-around;  }
+  .s-screen {
+    height:500px; /* 320px */
+    overflow:scroll;
+    overflow-x:hidden;
+    width: 100%;
+  }

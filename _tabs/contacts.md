@@ -13,4 +13,4 @@ order: 6
 * Twiter: [Denis Solicen](https://twitter.com/DenisSolicen) 
 * Или на личную почту: `solicenteam@gmail.com `
 * Лично мне **Денису Солицену** в дискорде.
- 
+

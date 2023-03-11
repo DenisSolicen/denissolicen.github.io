@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="/assets/css//screenshosts.css" />
+
 {% if page.gallery %}
-  <div class="post">
+  <div class="post" style="margin-top: -15px;">
     <div class="panel-heading">Скриншоты</div>
     <ul class="post-content post-screen pl-0 pb-1 ml-1 mt-2">
       {% if page.gallery %}
@@ -8,7 +10,7 @@
       {% if image.path contains 'assets/img/gallery/' %}
       {% if image.path contains slug %}
       <a href="{{ image.path }}" class="popup img-link preview-img lazyload">
-        <img src="{{ image.path }}" class="popup lazyload img-c" alt="Solicen - {{slug}} image">
+        <img src="{{ image.path }}" class="popup lazyload img-c" loading="lazy" alt="Solicen - {{slug}} image">
       </a>
 
       {% endif %}
@@ -25,35 +27,3 @@
   </div> <!-- Screenshots -->
 
 {% endif %}
-
-<style>
-    .img-c {
-      transition: 0.3s;
-      opacity: 100%;
-      position: relative;
-    }
-    .img-c:hover {  
-      transform: scale(1.05); opacity: 70%; filter: grayscale(10%); position: relative;
-    }
-
-  .post-screen::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
-  }
-  .post-screen:focus {
-    -ms-overflow-style:auto;  /* Internet Explorer 10+ */
-    scrollbar-width: auto;  /* Firefox */
-  }
-  .post-screen {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    height:320px; /* 320px */
-    overflow:scroll;
-    overflow-x:hidden;
-
-  }
-  .screenshot {
-    margin-bottom: 20px;
-    cursor: zoom-in;
-    transition: 0.3s ease, color 0.2s linear;
-  }
-</style>
