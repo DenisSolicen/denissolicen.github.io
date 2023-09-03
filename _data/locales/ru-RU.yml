@@ -43,7 +43,6 @@ copyright:
 
 meta: Сайт защищен <a href='https://www.cloudflare.com/'>Cloudflare</a>. <br> Работает на :PLATFORM на базе :THEME. 
 
-
 not_found:
   statment: Извините, эта ссылка указывает на ресурс который не существует.
 
@@ -57,10 +56,10 @@ post:
   written_by: Автор
   posted: Время публикации
   updated: Обновлено
-  words: слов
+  words: слов(а)
   pageview_measure: просмотров
   read_time:
-    unit: минут
+    unit: минут(а/ы)
     prompt: чтения
   relate_posts: Вам также может быть интересно
   share: Поделиться
