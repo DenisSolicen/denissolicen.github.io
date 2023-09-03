@@ -17,7 +17,6 @@ img: '/assets/img/boxarts/cos.png'
 {: .prompt-danger }
 
 {% include download.html name='Официальная страница игры Cost of Life (Цена Жизни)' url='https://solicen-team.itch.io/cost-of-life' id=0  dn="Перейти на страницу на itch.io"%}
-{% include download.html name='Скачать игру Cost of Life бесплатно' url='https://solicen-team.itch.io/cost-of-life' id=1  dn="Скачать бесплатно"%}
 ### Описание игры
 **Маленькая история о девочке, которую возненавидело общество.**
 
@@ -42,6 +41,4 @@ img: '/assets/img/boxarts/cos.png'
 * [Присоединяйтесь к нашему серверу Discord!](https://discord.gg/C3EyszK59m)
 * [Следите за остальными нашими играми!](https://solicen-team.itch.io/)
 * [Автор новеллы - SAn4Es-TV](https://github.com/SAn4Es-TV) 
-
-
-
+ 
