@@ -1,0 +1,42 @@
+
+
+{% assign HEAD_PREFIX = "h_" %}
+{% assign LIST_PREFIX = "download" %}
+{% assign group_index = include.id %}
+{% assign text = include.textspace %}
+<div class="download-sol" style="background-color: rgb(27, 27, 30); border-color: rgb(238, 238, 238); border: 1px solid; margin-top: 20px; ">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <span>
+        <span class="text-muted small font-weight-light">
+            {{include.name}}
+        </span>
+      </span>
+
+      <!-- arrow -->
+      {% if include.name %}
+      <div href="#{{ LIST_PREFIX }}{{ group_index }}" data-toggle="collapse"
+        aria-expanded="true" aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
+        class="category-trigger hide-border-bottom">
+        <i class="fas fa-fw fa-angle-down"></i>
+      </div>
+      {% endif %}
+
+    </div> <!-- .card-header -->
+
+    <!-- Sub-categories -->
+    {% if text != null %}
+    <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse " aria-expanded="true">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <span class="text-muted small font-weight-light">
+            {% assign content=include.textspace %}
+            {% include refactor-content.html content=content %}
+          </span>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+
+  </div> <!-- .card -->

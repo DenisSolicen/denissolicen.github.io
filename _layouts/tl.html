@@ -4,7 +4,8 @@ layout: default
 ---
 
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
-{% assign posts = site.posts | where_exp: "item", "item.boxart != null "%}
+{% assign posts = site.posts | where_exp: "item", "item.boxart != null  and item.future == null"%}
+{% assign future = site.posts | where_exp: "item", "item.boxart != null and item.future != false and item.future != null" %}
 
 <!-- Get pinned posts -->
 
@@ -51,6 +52,7 @@ layout: default
     .box-card-grid {
       display: grid; 
       grid-template-columns: repeat(auto-fill, 280px); 
+      
       gap: 40px;
       padding-top: 40px;
     }
@@ -68,6 +70,15 @@ layout: default
       
     }
       .box-card-div { height: 220px;}
+
+      .text {
+      text-align: center;
+      padding-left: 0px;
+      margin-left: 0px;
+    }
+    .text p {
+      margin-bottom: 40px;
+    }
     }
 
 
@@ -91,71 +102,31 @@ layout: default
       top: 50%;
       transform: translateY(-50%);
     }
+
     }
 
-
+    .text {
+      padding-left: 10px;
+    }
+    
 
   </style>
 </html>
 <div id="post-list" class="box-card-grid" style="">
-{% for post in posts %}
-
-  <div class="post-preview lazyload" style="padding: 10px;  background-size: cover; ">
-    <div style="overflow: hidden;  border-radius: 10px; cursor: pointer;" class="box-card-div" onclick="location.href='{{post.url}}'" href="{{ post.url | relative_url }}" >
-       <img src="{{post.boxart}}" style="width: 100%; margin-bottom: 5px; border-radius: 10px; " class="lazyload" alt="{{post.short}}" id="img">
-    </div>
-
-    <h1 style="margin-top: 5px;">
-      <a href="{{ post.url | relative_url }}" style="color: whitesmoke; font-size: 14px; font-weight: 700;">{{ post.short }}</a>
-    </h1>
-
-    <!--  {% if post.image %}
-    <img src="{{post.image}}" class="rounded-lg mt-2">
-    {% endif %}  -->
-
-    <div class="post-meta text-muted d-flex" style="align-content: center; margin-top: 5px;">
-      <div class="mr-auto">
-
-        <!-- posted date -->
-        <i class="far fa-calendar fa-fw"></i>
-        {% include datetime.html date=post.date %}
-        <!-- categories -->
-
-        {% if post.sub-cat.size > 0 %}
-          <i class="far fa-folder-open fa-fw"></i>
-          <span>
-          {% for category in post.sub-cat %}
-            {{ category }}
-            {%- unless forloop.last -%},{%- endunless -%}
-          {% endfor %}
-          </span>
-        {% endif %}
-
-        {% if post.platforms.size > 0 %}<br>
-
-        <span  style="margin-top: 10px;">
-        {% for platform in post.platforms %}
-            {% if platform == "android"%}
-            <i class="fa-brands fa-android"></i>
-            {% endif %}  
-            {% if platform == "linux"%}
-            <i class="fa-brands fa-linux"></i>
-            {% endif %}
-            {% if platform == "windows"%}
-            <i class="fa-brands fa-windows"></i>
-            {% endif %}
-        {% endfor %}
-        </span>
-      {% endif %}
-      </div>
-
-    </div> <!-- .post-meta -->
-
-  </div> <!-- .post-review -->
-
-{% endfor %}
-
+{% include boxartBlock.html posts=posts %}
 </div> <!-- #post-list -->
+<h1 class="text" style="color:rgb(201, 204, 207); font-size: 18px; font-weight: 700; margin-top: 50px; ">Переводы в производстве</h1>
+
+{% if future.size > 0 %}
+
+<div id="post-list" class="box-card-grid" style="">
+{% include boxartBlock.html posts=future %}
+</div> <!-- #post-list -->
+{% else %}
+<div>
+  <p class="text" style="color: gray;">Странно! Не найдено никаких проектов.</p>
+</div>
+{% endif %}
 
 {% if paginator.total_pages > 0 %}
   {% include post-paginator.html %}

@@ -1,0 +1,151 @@
+<script>
+const list = document.querySelector(".list");
+const items = Array.from(document.querySelectorAll(".item"));
+const indicators = Array.from(document.querySelectorAll(".indicator"));
+
+const observer = new IntersectionObserver(onIntersectionObserved, {
+  root: list,
+  threshold: 0.6
+});
+
+function onIntersectionObserved(entries) {
+  entries.forEach(entry => {
+    // On page load, firefox claims item with index 1 isIntersecting,
+    // while intersectionRatio is 0
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+      const intersectingIndex = items.indexOf(entry.target);
+      activateIndicator(intersectingIndex);
+    }
+  });
+}
+
+function activateIndicator(index) {
+  indicators.forEach((indicator, i) => {
+    indicator.classList.toggle("active", i === index);
+  });
+}
+
+items.forEach(item => {
+  observer.observe(item);
+});
+
+</script>
+
+<style>
+    .list {
+  display: flex;
+  overflow-x: scroll;
+
+  /* prevent accidentally going back or triggering other swipe events */
+  overscroll-behavior: contain;
+
+  /* hide scroll bar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  /* momentum scroll on iOS */
+  -webkit-overflow-scrolling: touch;
+
+  /* disable vertical scroll for touch */
+  touch-action: pan-x;
+
+  /* scroll snapping */
+  scroll-snap-type: x mandatory;
+}
+
+/* hide scroll bar */
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  height: 224px;
+  width: 100%;
+  flex-shrink: 0;
+
+  /* scroll snapping */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 
+  The styling below is only for the decoration of this demo, 
+  it has no impact on scrolling or scroll behavior
+*/
+.indicatorsList,
+.list {
+  list-style: none;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.list {
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 1);
+  border-radius: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.indicatorsList {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 1);
+}
+
+.indicator:not(:last-child) {
+  margin-right: 16px;
+}
+
+.indicator.active {
+  background-color: #e60576;
+}
+
+.viewport {
+  max-width: 420px;
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+</style>
+    <div class="viewport">
+        <ul class="list">
+            {% if page.gallery %}
+            {% assign slug = page.gallery %}
+            {% for image in site.static_files %}
+            {% if image.path contains 'assets/img/gallery/' %}
+            {% if image.path contains slug %}
+              <li class="item">
+                <a href="{{ image.path }}" class="popup img-link preview-img lazyload s-image">
+                    <img src="{{ image.path }}" class="popup lazyload s-image" alt="Solicen - {{slug}} image">
+                  </a>
+              </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </ul>
+</div>

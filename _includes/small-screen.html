@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="/assets/css/small-gallery.css" />
-
 {% if page.gallery %}
   <div class="post">
     <div class="panel-heading"></div>
@@ -12,7 +11,7 @@
       {% if image.path contains slug %}
         <div class="box-card-div">
             <a href="{{ image.path }}" class="popup img-link preview-img lazyload s-image">
-                <img src="{{ image.path }}" class="popup lazyload s-image" loading="lazy" alt="Solicen - {{slug}} image">
+                <img src="{{ image.path }}" class="popup lazyload s-image" loading="lazy" alt="Solicen — {{slug}} image">
               </a>
         </div>
       {% endif %}
