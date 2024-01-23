@@ -3,28 +3,14 @@
 -->
 
 <style>
-
-  #sidebar {
-    position: fixed;
-    top: 0;
-    height: 100%;
-    overflow-y: auto;
-    z-index: 99;
-    background: var(--sidebar-bg);
-    max-width: 280px;
-  }
-
-  #sidebar .nav-link {
-    text-transform: capitalize;
+  .nav-link {
     text-align: left;
-    padding-left: 20%; 
-    font-weight: 600;
-    letter-spacing: 0px;
+    padding-left: 25%;
+    
   }
 
   #sidebar .nav-link{
     transition: 0.5s;
-    
   }
 
   @media (min-width: 1650px) 
@@ -37,8 +23,7 @@
     }
 </style>
 
-<div id="sidebar" class="d-flex flex-column align-items-end" style="background: rgb(27, 27, 30);
-  border-right: 1px solid rgb(44, 45, 45); margin-left: -12px;">
+<div id="sidebar" class="d-flex flex-column align-items-end" style="text-align: left; background: rgb(30, 31, 34);">
   <div class="profile-wrapper text-center">
     <!-- <div id="avatar">
       <a href="{{ '/' | relative_url }}" class="mx-auto">
@@ -56,11 +41,11 @@
         {% endif %}
       </a>
     </div>  -->
-    <div class="site-title" style="margin-bottom: 24px;">
+    <div class="site-title">
 
-      <a href="{{ '/' | relative_url }}" style="font-size: 20px;">{{ site.title }}</a>
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
     </div>
-    <!--<div class="site-subtitle font-italic">{{ site.tagline }}</div>  -->
+    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
   </div><!-- .profile-wrapper -->
 
   <ul class="w-100">
@@ -68,18 +53,18 @@
     <!-- home -->
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link">
-        <i class="ml-xl-3 mr-xl-1 fa-regular fa-gem"></i>
-        <span>{{ site.data.locales[site.lang].tabs.home }}</span>
+        <i class="ml-xl-3 mr-xl-3 unloaded"></i>
+        <span>{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
       </a>
     </li>
     <!-- the real tabs -->
     {% for tab in site.tabs %}
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
-        <i class="ml-xl-3 mr-xl-1 fa-fw {{ tab.icon }}"></i>
+        <i class="ml-xl-3 mr-xl-3 unloaded"></i>
         {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-        
-        <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title }}</span>
+
+        <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
       </a>
     </li> <!-- .nav-item -->
     {% endfor %}
