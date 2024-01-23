@@ -1,6 +1,6 @@
 ---
-title: "Цена Жизни (Cost of Life) — Демо версия"
-categories: [инди-игра, visualnovel]
+title: "Цена Жизни (Cost of Life)"
+categories: [Игры, Visual Novel]
 tags: [visualnovel, визуальная новелла, ужасы, психология, селфхарм, ren'py, драма, психологическое, сверхъестественное]
 pin: true
 boxart: '/assets/img/boxarts/cos.png'
