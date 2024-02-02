@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "jekyll-theme-chirpy", "~> 5.3", ">= 5.5.2"
-
+gem "font-awesome-sass", "~> 6.5.1"
 group :test do
   gem "html-proofer", "~> 3.18"
 end

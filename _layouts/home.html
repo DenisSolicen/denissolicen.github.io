@@ -114,7 +114,7 @@ layout: page
           <i class="far fa-folder-open fa-fw"></i>
           <span>
           {% for category in post.categories %}
-            <span style="cursor: pointer;" class="category" onclick="location.href='/categories/{{category}}'">{{ category }}</span>
+            <span style="cursor: pointer; text-transform: lowercase;" class="category" onclick="location.href='/categories/{{category}}'">{{ category }}</span>
             {%- unless forloop.last -%},{%- endunless -%}
           {% endfor %}
           </span>

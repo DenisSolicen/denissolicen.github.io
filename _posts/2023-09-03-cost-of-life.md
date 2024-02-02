@@ -3,6 +3,10 @@ title: "Цена Жизни (Cost of Life)"
 categories: [Игры, Visual Novel]
 tags: [visualnovel, визуальная новелла, ужасы, психология, селфхарм, ren'py, драма, психологическое, сверхъестественное]
 pin: true
+
+permalink: "solicen-development/cost-of-life"
+redirect_from: [/mas,/monika-after-story,/моника-после-истории]
+
 boxart: '/assets/img/boxarts/cos.png'
 short: "Цена Жизни — Демо версия"
 sub-cat: [визуальная новелла]
@@ -10,6 +14,30 @@ text: "Оригинальная новелла от SAn4Es_TV, она расск
 gallery: 'cos'
 redirect_from: /cost-of-life
 img: '/assets/img/boxarts/cos.png'
+
+downloadLink:
+  dev:
+     style: 0
+     header: "Разработчик"
+     title: "SAn4Es_TV, Solicen Development"
+  publisher:
+     style: 0
+     header: "Издатель"
+     title: "Solicen Development"
+  vkPlay:
+     style: 1
+     title: "Скачать бесплатно"
+     url:  "https://vkplay.ru/play/game/cost_of_life/"
+     version: VK Play
+  itch:
+     style: 1
+     title: "Скачать бесплатно"
+     url:  "https://solicen-team.itch.io/cost-of-life"
+     version: itch.io
+
+  
+# < Стиль кнопки || 0 = TextWithLink || 1 = BlueDownload || 2 = RedDownload || 3 = YellowDownload >
+
 ---
 > Оригинальная история созданная украинским инди-разработчиком — SAn4Es_TV в содружестве с основателем русскоязычного сообщества — Команда Солицена при поддержке Дениса Солицена.
 {: .prompt-info }

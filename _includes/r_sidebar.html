@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/assets/css/downloadBlock.css" />
+
+<style>
+  .dButton {
+    background: rgb(57, 149, 235);
+  }
+  .dButton:hover {
+    background: rgb(41, 184, 41); 
+  }
+
+</style>
+
+
+{% assign HEAD_PREFIX = "d_" %}
+{% assign LIST_PREFIX = "download" %}
+{% assign group_index = include.id %}
+{% assign dn = include.dn %}
+
+{% if page.downloadLink %}
+<div style="border-radius: 25px; border: 1px solid rgb(44, 45, 45); padding: 12px; ">
+  {% for item in page.downloadLink %}
+  {% if item[1].style == 1 %}
+  <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:white;">
+        <span style="font-size: 14px;">{{item[1].title}}</span>
+        <span></span>
+      </div>
+      <span>
+        <i class="fa-sharp fa-solid fa-download" style="opacity: 40%;"></i>
+      </span>
+      <span class="small" style="color:white; opacity: 50%;">
+        {{item[1].version}}
+      </span>
+    </div> <!-- .card-header -->
+  
+    <!-- Sub-categories -->
+    {% if include.url != null %}
+    <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse " aria-expanded="true">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="" class="ml-1 mr-2">{{ iclude.url }}</a>
+          <span class="text-muted small font-weight-light">
+            {% if dn == null %}
+            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">Скачать файл</a>
+            {% else %}
+            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">{{dn}}</a>
+            {% endif %}
+  
+          </span>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+  
+  </div> <!-- .card -->
+  {% endif %}
+  {% if item[1].style == 0 %}
+  <div class="" style="margin-bottom: 5px; padding: 0px;">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:rgb(57, 149, 235)">
+        <span style="font-size: 16px;  text-transform: capitalize;">{{item[1].header}}</span><br>
+        <span style="font-size: 14px; color: rgb(170, 170, 171)">{{item[1].title}}</span>
+        <span></span>
+      </div>
+    </div> <!-- .card-header -->
+  
+    <!-- Sub-categories -->
+    {% if include.url != null %}
+    <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse " aria-expanded="true">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <a href="" class="ml-1 mr-2">{{ iclude.url }}</a>
+          <span class="text-muted small font-weight-light">
+            {% if dn == null %}
+            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">Скачать файл</a>
+            {% else %}
+            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">{{dn}}</a>
+            {% endif %}
+  
+          </span>
+        </li>
+      </ul>
+    </div>
+    {% endif %}
+  
+  </div> <!-- .card -->
+  {% endif %}
+  {% endfor %}  
+</div>
+{% endif %}

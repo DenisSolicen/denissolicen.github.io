@@ -2,6 +2,8 @@
   The common styles
 */
 
+@import "font-awesome";
+
 html {
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
@@ -783,7 +785,7 @@ $sidebar-display: "sidebar-display";
     border-radius: 0;
     font-size: 0.95rem;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     display: table-cell;
     vertical-align: middle;
   }
