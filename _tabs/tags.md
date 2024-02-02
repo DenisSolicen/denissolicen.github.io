@@ -1,6 +1,6 @@
 ---
 layout: tags
-icon: fas fa-tag
+icon: fa-regular fa-bookmark
 order: 8
 title: Теги
 ---

@@ -7,28 +7,21 @@
   .dButton:hover {
     background: rgb(41, 184, 41); 
   }
-
 </style>
 
-
-{% assign HEAD_PREFIX = "d_" %}
-{% assign LIST_PREFIX = "download" %}
-{% assign group_index = include.id %}
-{% assign dn = include.dn %}
-
-{% if page.downloadLink %}
-<div style="border-radius: 25px; border: 1px solid rgb(44, 45, 45); padding: 12px; ">
-  {% for item in page.downloadLink %}
+{% assign m = page.date | date: "%-m" | minus: 1 %}
+{% if page.sideInfo %}
+<div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px; margin-top: 20px; margin-bottom: 10px;">
+  {% for item in page.sideInfo %}
   {% if item[1].style == 1 %}
   <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
       class="card-header d-flex justify-content-between hide-border-bottom">
-      <div style="font-size: 10px; color:white;">
+      <div style="color:white;">
         <span style="font-size: 14px;">{{item[1].title}}</span>
-        <span></span>
       </div>
-      <span class="small" style="color:white; opacity: 50%;">
+      <span class="small" style="color:white; opacity: 50%; vertical-align: super; margin-top: 2px;">
         {{item[1].version}}
       </span>
     </div> <!-- .card-header -->
@@ -64,29 +57,43 @@
         <span style="font-size: 14px; color: rgb(170, 170, 171)">{{item[1].title}}</span>
         <span></span>
       </div>
-    </div> <!-- .card-header -->
-  
-    <!-- Sub-categories -->
-    {% if include.url != null %}
-    <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse " aria-expanded="true">
-      <ul class="list-group">
-        <li class="list-group-item">
-          <a href="" class="ml-1 mr-2">{{ iclude.url }}</a>
-          <span class="text-muted small font-weight-light">
-            {% if dn == null %}
-            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">Скачать файл</a>
-            {% else %}
-            <a href="{{include.url}}" onclick="location.href='{{include.url}}';">{{dn}}</a>
-            {% endif %}
-  
-          </span>
-        </li>
-      </ul>
-    </div>
-    {% endif %}
-  
+    </div> 
   </div> <!-- .card -->
   {% endif %}
   {% endfor %}  
+</div>
+{% endif %}
+{% if page.date %}
+<div style="border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
+  <div class="" style="margin-bottom: 5px; padding: 0px;">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:rgb(57, 149, 235)">
+        <span style="font-size: 16px;  text-transform: capitalize;">Опубликовано</span><br>
+        <span style="font-size: 14px; color: rgb(170, 170, 171)">
+          <!-- localizated date -->
+          <span>{{ page.date | date: "%-d" }}</span>
+          <span style="text-transform: lowercase;">{{ site.months[m] }}</span>
+          <span>{{ page.date | date: "%Y" }} года</span>
+        </span>
+      </div>
+    </div> 
+  </div> <!-- .card -->
+  <div class="" style="margin-bottom: 5px; padding: 0px;">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:rgb(57, 149, 235)">
+        <span style="font-size: 16px;  text-transform: capitalize;">Обновлено</span><br>
+        <span style="font-size: 14px; color: rgb(170, 170, 171)">
+          <!-- localizated date -->
+          <span>{{ page.last_modified_at | date: "%-d" }}</span>
+          <span style="text-transform: lowercase;">{{ site.months[m] }}</span>
+          <span>{{ page.last_modified_at | date: "%Y" }} года</span>
+        </span>
+      </div>
+    </div> 
+  </div> <!-- .card -->
 </div>
 {% endif %}

@@ -1,6 +1,6 @@
 ---
 layout: tl
-icon: fa-solid fa-language
+icon: fa-regular fa-note-sticky
 order: 0
 title: Проекты
 redirect_from:

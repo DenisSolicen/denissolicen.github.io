@@ -3,16 +3,83 @@
 -->
 
 <style>
-  .nav-link {
-    text-align: left;
-    padding-left: 25%;
+
+@media all and (min-width: 1050px) and  (max-width: 1650px) {
+  #main-wrapper {
+    margin-left: 0px;
+  }
+}
+
+@media all and (min-width: 1050px) {
+  #sidebar * {
+    box-sizing: initial;
+  }
+
+  .col-xl-3 {
+    padding-right: 0px;
+  }
+
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 92%;
+  }
+}
+
+@media all and (min-width: 1199px) {
+  #sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 99;
+    background: var(--sidebar-bg);
+    width: 80px;
+    transition: 1.5s;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+
+    span {
+      transition: 1.5s;
+      opacity: 0%;
+    } 
+    a {
+      max-width: 50px;
+    }
+
+    .nav-link {
+      text-transform: capitalize;
+      text-align: left;
+      padding-left: 20%; 
+      font-weight: 600;
+      letter-spacing: 0px;
+    }
+
+    .site-title {
+      transition: 0.5s;
+      opacity: 0%;
+    }
+  }
+
+  #sidebar:hover .site-title{
+    transition: 2.5s;
+    opacity: 100%;
+  }
+
+
+  #sidebar:hover span{
+    transition: 1.5s;
+    opacity: 100%;
+  }
+
+  #sidebar:hover {
+    width: 280px;;
+  }
+
+  #sidebar .nav-link {
+    transition: 0.5s;
     
   }
 
-  #sidebar .nav-link{
-    transition: 0.5s;
-  }
-
+}
+ 
   @media (min-width: 1650px) 
     {
       .nav-link {
@@ -23,7 +90,8 @@
     }
 </style>
 
-<div id="sidebar" class="d-flex flex-column align-items-end" style="text-align: left; background: rgb(30, 31, 34);">
+<div id="sidebar" class="d-flex flex-column align-items-end" style="background: rgb(27, 27, 30);
+  border-right: 1px solid rgb(44, 45, 45); margin-left: -12px;">
   <div class="profile-wrapper text-center">
     <!-- <div id="avatar">
       <a href="{{ '/' | relative_url }}" class="mx-auto">
@@ -41,11 +109,10 @@
         {% endif %}
       </a>
     </div>  -->
-    <div class="site-title">
-
-      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <div class="site-title" style="margin-bottom: 24px;">
+      <a href="{{ '/' | relative_url }}" style="font-size: 20px; ">{{ site.title }}</a>
     </div>
-    <div class="site-subtitle font-italic">{{ site.tagline }}</div>
+    <!--<div class="site-subtitle font-italic">{{ site.tagline }}</div>  -->
   </div><!-- .profile-wrapper -->
 
   <ul class="w-100">
@@ -53,18 +120,18 @@
     <!-- home -->
     <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link">
-        <i class="ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>{{ site.data.locales[site.lang].tabs.home | upcase }}</span>
+        <i class="ml-xl-3 mr-xl-1 fa-regular fa-gem"></i>
+        <span>{{ site.data.locales[site.lang].tabs.home }}</span>
       </a>
     </li>
     <!-- the real tabs -->
     {% for tab in site.tabs %}
     <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link">
-        <i class="ml-xl-3 mr-xl-3 unloaded"></i>
+        <i class="ml-xl-3 mr-xl-1 fa-fw {{ tab.icon }}"></i>
         {% capture tab_name %}{{ tab.url | split: '/' }}{% endcapture %}
-
-        <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title | upcase }}</span>
+        
+        <span>{{ site.data.locales[site.lang].tabs.[tab_name] | default: tab.title }}</span>
       </a>
     </li> <!-- .nav-item -->
     {% endfor %}
@@ -82,7 +149,7 @@
         <span class="icon-border"></span>
       {% endif %}
     {% endunless %}
-
+<!--
     {% for entry in site.data.contact %}
       {% capture url %}
         {%- if entry.type == 'github' -%}
@@ -106,7 +173,7 @@
       </a>
       {% endif %}
 
-    {% endfor %}
+    {% endfor %}-->
 
   </div> <!-- .sidebar-bottom -->
 

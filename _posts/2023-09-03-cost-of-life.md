@@ -15,7 +15,7 @@ gallery: 'cos'
 redirect_from: /cost-of-life
 img: '/assets/img/boxarts/cos.png'
 
-downloadLink:
+sideInfo:
   dev:
      style: 0
      header: "Разработчик"

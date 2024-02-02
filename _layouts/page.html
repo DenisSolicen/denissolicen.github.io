@@ -37,10 +37,13 @@ layout: default
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
     <div class="access sticky">
-      <!-- {% include nowComment.html %}  -->
+      <!-- {% include nowComment.html %}  --> 
 
+      {% if page.date == null %}
       {% include update-list.html %}
-      {% include r_sidebar.html %}
+      {% endif %}
+
+      {% include r_sidebar.html %} 
 
         <!-- TOC -->
         {% for _include in layout.panel_includes %}

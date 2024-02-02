@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-icon: fas fa-info-circle
+icon: fa-regular fa-handshake
 title: Вакансии
 order: 5
 ---

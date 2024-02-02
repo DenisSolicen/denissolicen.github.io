@@ -142,6 +142,21 @@ collections:
     output: true
     sort_by: order
 
+
+months:
+  - Января
+  - Февраля
+  - Марта
+  - Апреля
+  - Мая
+  - Июня
+  - Июля
+  - Августа
+  - Сентября
+  - Октября
+  - Ноября
+  - Декабря
+
 defaults:
   - scope:
       path: ''          # An empty string here means all files in the project
@@ -152,7 +167,7 @@ defaults:
       toc: true         # Display TOC column in posts.
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
-      permalink: /:title.hmtl
+      permalink: /:title
   - scope:
       path: _drafts
     values:

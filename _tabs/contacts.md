@@ -1,7 +1,9 @@
 ---
 title: Контакты
-icon: fas fa-info-circle
+icon: fa-regular fa-address-book
 order: 6
+
+permalink: "/contact-with-us"
 ---
 
 
