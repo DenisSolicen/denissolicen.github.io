@@ -55,7 +55,7 @@ jobs:
 
       - name: Verify HTML Url
         run: |
-          bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
+          bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href --assume_extension
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v1
