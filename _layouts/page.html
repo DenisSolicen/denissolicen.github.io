@@ -37,7 +37,11 @@ layout: default
   <!-- panel -->
   <div id="panel-wrapper" class="col-xl-3 pl-2 text-muted">
     <div class="access sticky">
-      <!-- {% include nowComment.html %}  --> 
+      <!-- Now Comment (by Discuss)
+      {% if page.date == null %}
+      {% include nowComment.html %}  
+      {%endif%} -->
+
 
       {% if page.date == null %}
       {% include update-list.html %}
@@ -45,14 +49,20 @@ layout: default
 
       {% include r_sidebar.html %} 
 
-        <!-- TOC -->
+        <!-- TOC 
         {% for _include in layout.panel_includes %}
         {% assign _include_path = _include | append: '.html' %}
         {% include {{ _include_path }} %}
         {% endfor %}
-        
+        -->
       
       {% include screenshots.html %}
+
+      <!-- Now Comment (by Discuss)
+      {% if page.date %}
+      {% include nowComment.html %}  
+      {%endif%} -->
+
       {% if page.toc == null %}
         {% include trending-tags.html %}
       {% endif %}

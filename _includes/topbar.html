@@ -19,7 +19,7 @@ background-color: rgb(30, 31, 34);">
       {% for item in paths %}
 
         {% if forloop.first %}
-          <span>
+         <!-- <span>
             <a href="{{ '/' | relative_url }}">
               {{ site.data.locales[site.lang].tabs.home | capitalize }}
             </a>
@@ -31,7 +31,7 @@ background-color: rgb(30, 31, 34);">
             <span>{{ site.data.locales[site.lang].tabs[item] | default: page.title }}</span>
           {% else %}
             <span>{{ page.title }}</span>
-          {% endif %}
+          {% endif %}  -->
 
         {% elsif page.layout == 'category' or page.layout == 'tag' %}
           <span>

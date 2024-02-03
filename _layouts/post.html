@@ -2,7 +2,6 @@
 layout: page
 refactor: true
 panel_includes:
-  - toc
 tail_includes:
   - related-posts
   - post-nav
@@ -12,7 +11,16 @@ tail_includes:
 
 {%endif%}
 
-<h1 data-toc-skip style="color:rgb(255, 255, 255); font-size: 26px; font-weight: 700; margin-bottom: 5px;">{{ page.title }}</h1>
+<style>
+  .btn-outline-primary {
+    background-color: rgba(39, 40, 43, 0.411);
+    p {
+      color: rgba(175, 176, 177, 0.699)!important;
+    }
+  }
+</style>
+
+<h1 data-toc-skip style="color:rgb(255, 255, 255); font-size: 36px; font-weight: 700; margin-bottom: 5px;">{{ page.title }}</h1>
     <!-- categories -->
     {% if page.categories.size > 0 %}
     <div class="post-meta mb-3" style="font-size: 16px; margin-left: -3px;">

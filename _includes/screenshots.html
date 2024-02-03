@@ -2,7 +2,7 @@
 
 {% if page.gallery %}
   <div class="post" style="margin-top: -15px;">
-    <div class="panel-heading">Скриншоты</div>
+    <div class="panel-heading" style="margin-left: 10px;">Скриншоты</div>
     <ul class="post-content post-screen pl-0 pb-1 ml-1 mt-2">
       {% if page.gallery %}
       {% assign slug = page.gallery %}
@@ -10,7 +10,7 @@
       {% if image.path contains 'assets/img/gallery/' %}
       {% if image.path contains slug %}
       <a href="{{ image.path }}" class="popup img-link preview-img lazyload">
-        <img src="{{ image.path }}" class="popup lazyload img-c" loading="lazy" alt="Solicen - {{slug}} image">
+        <img src="{{ image.path }}" style="border-radius: 10px;" class="popup lazyload img-c" loading="lazy" alt="Solicen - {{slug}} image">
       </a>
 
       {% endif %}

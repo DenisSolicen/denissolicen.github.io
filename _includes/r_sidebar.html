@@ -7,21 +7,28 @@
   .dButton:hover {
     background: rgb(41, 184, 41); 
   }
+  .glassmorphism {
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  }
 </style>
 
 {% assign m = page.date | date: "%-m" | minus: 1 %}
+{% assign mLast = page.last_modified_at | date: "%-m" | minus: 1 %}
+
 {% if page.sideInfo %}
 <div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px; margin-top: 20px; margin-bottom: 10px;">
   {% for item in page.sideInfo %}
   {% if item[1].style == 1 %}
-  <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
+  <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton glassmorphism" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
       class="card-header d-flex justify-content-between hide-border-bottom">
       <div style="color:white;">
         <span style="font-size: 14px;">{{item[1].title}}</span>
       </div>
-      <span class="small" style="color:white; opacity: 50%; vertical-align: super; margin-top: 2px;">
+      <span class="small" style="font-size: 12px; color:white; opacity: 50%; vertical-align: super; margin-top: 2px;">
         {{item[1].version}}
       </span>
     </div> <!-- .card-header -->
@@ -48,7 +55,7 @@
   </div> <!-- .card -->
   {% endif %}
   {% if item[1].style == 0 %}
-  <div class="" style="margin-bottom: 5px; padding: 0px;">
+  <div style="margin-bottom: 5px; padding: 0px;">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
       class="card-header d-flex justify-content-between hide-border-bottom">
@@ -80,6 +87,7 @@
       </div>
     </div> 
   </div> <!-- .card -->
+  {% if page.last_modified_at %}
   <div class="" style="margin-bottom: 5px; padding: 0px;">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
@@ -89,11 +97,12 @@
         <span style="font-size: 14px; color: rgb(170, 170, 171)">
           <!-- localizated date -->
           <span>{{ page.last_modified_at | date: "%-d" }}</span>
-          <span style="text-transform: lowercase;">{{ site.months[m] }}</span>
+          <span style="text-transform: lowercase;">{{ site.months[mLast] }}</span>
           <span>{{ page.last_modified_at | date: "%Y" }} года</span>
         </span>
       </div>
     </div> 
   </div> <!-- .card -->
+  {% endif %}
 </div>
 {% endif %}
