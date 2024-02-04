@@ -30,8 +30,13 @@ tail_includes:
     {% endif %}
     
     <!-- ImageSlider (WIP) -->
-  
-    
+    <div class="noScreen" style="margin-bottom: 20px;">
+      {% include ImageSlider.html %}
+      <!-- Small Screen -->
+      <div class="small-rSidebar">
+      {% include r_sidebar.html %} 
+      </div>
+  </div>
 
 <div class="post-meta text-muted">
     <!-- published date -->
@@ -103,22 +108,7 @@ tail_includes:
     <h3>Предварительно заготовленная страница. </h3>
     <p>Данный перевод еще не готов, следите за новостями в нашем Discord, или группе VK.</p>
     {% endif %} {{ content }} {% if page.gallery %}
-    <style>
-        .noScreen {
-            display: none;
-        }
-        
-        @media(max-width: 1050px) {
-            .noScreen {
-                display: block;
-                overflow: hidden;
-                height: 500px;
-            }
-        }
-    </style>
-    <div class="noScreen">
-        {% include small-screen.html %}
-    </div>
+
     {% endif %}
 </div>
 
@@ -158,5 +148,38 @@ tail_includes:
     margin-top: 25px;
     border-radius: 20px;
   }
+  }
+</style>
+<style>
+  .noScreen {
+      display: none;
+      div {
+        padding: 6px;
+      }
+
+  }
+
+  .small-rSidebar {
+    display: grid; 
+    grid-template-columns: 65% auto; 
+    margin: 0; padding: 0;
+    margin-left: -5px;
+  }
+  @media (max-width: 450px) {
+    .small-rSidebar {
+    display: contents; 
+    grid-template-columns: 60% auto; 
+    margin: 0; padding: 0;
+
+    * {
+      border: 0!important;
+    }
+  }
+  }
+  @media(max-width: 1200px) {
+      .noScreen {
+          display: block;
+          overflow: hidden;
+      }
   }
 </style>

@@ -18,7 +18,7 @@
 {% assign mLast = page.last_modified_at | date: "%-m" | minus: 1 %}
 
 {% if page.sideInfo %}
-<div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px; margin-top: 20px; margin-bottom: 10px;">
+<div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px">
   {% for item in page.sideInfo %}
   {% if item[1].style == 1 %}
   <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton glassmorphism" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">

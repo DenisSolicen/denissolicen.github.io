@@ -11,7 +11,7 @@ boxart: '/assets/img/boxarts/cos.png'
 short: "Цена Жизни — Демо версия"
 sub-cat: [визуальная новелла]
 text: "Оригинальная новелла от SAn4Es_TV, она рассказывает историю об девочке, которую возненавидело общество. Игра представляет собой небольшую визуальную новеллу..."
-gallery: 'cos'
+gallery: 'col'
 redirect_from: /cost-of-life
 img: '/assets/img/boxarts/cos.png'
 

@@ -51,5 +51,5 @@ String.prototype.endsWith = function (s) {
               } 
             })
           },'json');
-        };
+        };  
     });
