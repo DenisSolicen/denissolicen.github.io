@@ -21,7 +21,7 @@
 <div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px">
   {% for item in page.sideInfo %}
   {% if item[1].style == 1 %}
-  <div onclick="window.open('{{item[1].url}}')" class="download-sol dButton glassmorphism" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
+  <div onclick="window.open('{{item[1].url}}')" class="infoDiv download-sol dButton glassmorphism" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
       class="card-header d-flex justify-content-between hide-border-bottom">
@@ -72,7 +72,7 @@
 {% endif %}
 {% if page.date %}
 <div style="border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
-  <div class="" style="margin-bottom: 5px; padding: 0px;">
+  <div class="infoDiv" style="margin-bottom: 5px; padding: 0px;">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
       class="card-header d-flex justify-content-between hide-border-bottom">
