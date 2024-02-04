@@ -18,7 +18,7 @@
 {% assign mLast = page.last_modified_at | date: "%-m" | minus: 1 %}
 
 {% if page.sideInfo %}
-<div style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px">
+<div class="item-info downloadBtn" style="border-radius: 20px; border: 1px solid rgb(44, 45, 45); padding: 12px">
   {% for item in page.sideInfo %}
   {% if item[1].style == 1 %}
   <div onclick="window.open('{{item[1].url}}')" class="infoDiv download-sol dButton glassmorphism" style="cursor: pointer; margin: 10px; margin-bottom: 5px; border-radius: 13px; border:1px solid rgb(78, 84, 90);">
@@ -71,7 +71,7 @@
 </div>
 {% endif %}
 {% if page.date %}
-<div style="border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
+<div class="item-info" style="border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
   <div class="infoDiv" style="margin-bottom: 5px; padding: 0px;">
     <!-- top-category -->
     <div id="{{ HEAD_PREFIX }}{{ group_index }}"
