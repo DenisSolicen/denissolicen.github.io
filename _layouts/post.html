@@ -168,7 +168,7 @@ tail_includes:
     margin-left: -2px;
     display: flex; 
     grid-template-columns: 65% auto; 
-    gap:20px;
+    gap:20px!important;
     padding: 0;
     flex-flow: wrap;
 
@@ -200,7 +200,7 @@ tail_includes:
       flex:0;
     }
     .small-rSidebar{
-      gap: 0;
+      gap: 0!important;
     }
     .item-info:nth-child(3) {
       grid-area: auto;
@@ -208,7 +208,7 @@ tail_includes:
   }
   @media (max-width: 450px) {
     .small-rSidebar {
-    display: contents; 
+    display:grid;
     grid-template-columns: 60% auto; 
     margin: 0; padding: 0;
 
