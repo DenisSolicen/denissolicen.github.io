@@ -47,6 +47,10 @@ layout: page
     background-color: rgb(30, 31, 34);
     margin-top: 20px;
     transition: 0.5s;
+
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
   }
 
   @media (min-width: 576px){       
@@ -75,7 +79,7 @@ layout: page
     {% endif %} 
 
     <h1 class="mb-2" style="padding-left: 20px; padding-right: 20px;">
-      <a style="color:rgb(201, 204, 207); font-size: 22px; font-weight: 700;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <a style="color:rgb(201, 204, 207); font-size: 24px; font-weight: 700;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h1>
     <div class="post-content" style="padding-left: 20px; padding-right: 20px; font-size: 17px; line-height: 1.45;">
       <p>

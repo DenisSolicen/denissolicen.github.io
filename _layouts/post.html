@@ -28,6 +28,11 @@ tail_includes:
         <a style="color: rgb(60, 162, 255); text-transform: capitalize;" href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a> {%- unless forloop.last -%}, {%- endunless -%} {% endfor %}
     </div>
     {% endif %}
+    
+    <!-- ImageSlider (WIP) -->
+  
+    
+
 <div class="post-meta text-muted">
     <!-- published date -->
     <span>
@@ -148,8 +153,10 @@ tail_includes:
 <!-- div.post-tail-wrapper -->
 
 <style>
-  img {
+  #core-wrapper {
+    img {
     margin-top: 25px;
     border-radius: 20px;
+  }
   }
 </style>

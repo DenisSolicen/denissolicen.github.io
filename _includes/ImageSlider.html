@@ -1,0 +1,89 @@
+<!--Image Slider -->
+<section class="slider-container">
+    <div class="slider-wrapper">
+        {% if page.gallery %}
+        <div class="slider-image">
+            {% assign slug = page.gallery %}
+            {% for image in site.static_files %}
+            {% if image.path contains 'assets/img/gallery/' %}
+            {% if image.path contains slug %}
+            <img id="slide-{{forloop.index}}" style="scroll-padding-bottom: 200px; scroll-margin-bottom: 2000px;" src="{{ image.path }}" alt="{{page.url}}">
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div class="slider-nav">
+
+            {% assign slug = page.gallery %}
+            {% for image in site.static_files %}
+            {% if image.path contains 'assets/img/gallery/' %}
+            {% if image.path contains slug %}
+            <a href="#slide-{{forloop.index}}" onclick="return false"></a>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!--Script Section -->
+<!--CSS Section -->
+<style>
+
+    .slider-image::-webkit-scrollbar {
+        width: 0!important;
+    }
+
+    .slider-container {
+        .img-link {
+            flex: 1 0 100%!important;
+            scroll-snap-align: start!important;
+            object-fit: cover!important;
+            display: block!important;
+        }
+        img {
+            margin-top: 0px!important;
+        }
+
+    }
+    .slider-wrapper {
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+    .slider-image {
+        display: flex;
+        aspect-ratio: 16 / 9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow:  0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 2.25rem;
+        left:50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .slider-nav a {
+        border: 2px solid rgb(171, 174, 179);
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 50%;
+        background-color: #ffffff00;
+        opacity: 0.95;
+        transition: 0.35s;
+    }
+    .slider-nav a:hover {
+        opacity: 1;
+        background-color: #ffffff;
+        border: 2px solid #ffffff;
+    }
+</style>
