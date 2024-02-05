@@ -3,7 +3,7 @@ layout: compress
 # Default layout
 ---
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 {% include assets-origin.html %}
 
 {% capture prefer_mode %}
@@ -11,12 +11,6 @@ layout: compress
     data-mode="{{ site.theme_mode }}"
   {% endif %}
 {% endcapture %}
-
-<style>
-  body {
-    background-color: rgb(27, 27, 30);
-  }
-</style>
 
 <!-- `site.alt_lang` can specify a language different from the UI -->
 <html lang="{{ site.alt_lang | default: site.lang }}"{{ prefer_mode }}>
@@ -31,13 +25,10 @@ layout: compress
       <div id="main" class="container pl-xl-4 pr-xl-4">
         {{ content }}
       </div>
-
       {% include search-results.html %}
-
     </div> <!-- #main-wrapper -->
 
     {% include footer.html %}
-
     {% if page.mermaid %}
       {% include mermaid.html %}
     {% endif %}
@@ -47,7 +38,6 @@ layout: compress
     <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
       <i class="fas fa-angle-up"></i>
     </a>
-
     {% if site.pwa.enabled %}
       <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
         data-animation="true" data-autohide="false">
