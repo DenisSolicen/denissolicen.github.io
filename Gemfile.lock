@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
-    autoprefixer-rails (9.8.6.5)
+    autoprefixer-rails (8.6.5)
       execjs
     colorator (1.1.0)
     concurrent-ruby (1.2.2)
@@ -50,8 +50,6 @@ GEM
       webrick (~> 1.7)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-autoprefixer (1.0.2)
-      autoprefixer-rails (~> 9.3)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -120,9 +118,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  autoprefixer-rails (= 8.6.5)
   font-awesome-sass (~> 6.5.1)
   html-proofer (~> 3.18)
-  jekyll-autoprefixer
   jekyll-theme-chirpy (~> 5.3, >= 5.5.2)
   tzinfo (~> 1.2)
   tzinfo-data
