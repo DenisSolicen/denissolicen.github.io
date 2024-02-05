@@ -162,51 +162,58 @@ tail_includes:
     margin: 0;
     margin-top: 20px;
     margin-left: -2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
+    -ms-grid-columns: 65% 20px auto; 
     grid-template-columns: 65% auto; 
     gap:20px!important;
     padding: 0;
-    flex-flow: wrap;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
 
     margin-bottom: 20px;
   }
 
   .downloadBtn { flex:1; }
-  .item-info:nth-child(3) { grid-area: 1 / 2/ 2 /3; }
+  .item-info:nth-child(3) 
+  { 
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2/ 2 /3; 
+  }
   .item-info:nth-child(5) { flex:1; }
-  .item-info { display: flex; }
+  .item-info { display: flex; display: -webkit-box; display: -ms-flexbox;}
   .donation { flex:1;}
   .slider-container * { padding: 0px!important; }
 
   }
   @media (max-width: 600px) {
     .downloadBtn {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-flow: wrap;
-      flex:1;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
+      -webkit-box-flex:1;
+      -ms-flex:1;
+              flex:1;
     }
-    .item-info {
-      display: block!important;
-    }
-    .item-info:nth-child(1) {
-      order:2;
-    }
-    .item-info:nth-child(5) {
-      flex:0;
-    }
-    .small-rSidebar{
-      gap: 0!important;
-      height: 0;
-    }
-    .item-info:nth-child(3) {
-      grid-area: auto;
-  }
+    .item-info { display: block!important; }
+    .item-info:nth-child(1) { order:2; }
+    .item-info:nth-child(5) { -webkit-box-flex:0; -ms-flex:0; flex:0; }
+    .small-rSidebar{ gap: 0!important; height: 0; }
+    .item-info:nth-child(3) { grid-area: auto; }
   }
   @media (max-width: 450px) {
     .small-rSidebar {
-    display:grid;
-    grid-template-columns: 60% auto; 
-    margin: 0; padding: 0;
+      display:-ms-grid;
+      display:grid;
+      -ms-grid-columns: 60% auto;
+      grid-template-columns: 60% auto; 
+      margin: 0; padding: 0;
 
     * {
       border: 0!important;
