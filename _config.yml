@@ -3,8 +3,15 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
+# All of plugins of site
 plugins:
+  - jekyll-autoprefixer
   - jekyll-redirect-from
+
+# Auto Prefexier Configuration
+autoprefixer:
+  only_production: true
+
 
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
