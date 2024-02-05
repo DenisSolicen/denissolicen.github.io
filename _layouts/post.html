@@ -36,7 +36,7 @@ tail_includes:
       <div class="small-rSidebar">
 
       {% include r_sidebar.html %} 
-      {% include buyMeCoffee.html %} 
+      {% include buyMeCoffee.html disableSub=true %} 
       </div>
   </div>
 
@@ -153,10 +153,6 @@ tail_includes:
   }
 </style>
 <style>
-  .donation { flex:1;}
-  .slider-container * {
-        padding: 0px!important;
-      }
   .noScreen {
       display: none;  
       div {
@@ -174,18 +170,14 @@ tail_includes:
 
     margin-bottom: 20px;
   }
-  .downloadBtn {
-    flex:1;
-  }
-  .item-info:nth-child(3) {
-    grid-area: 1 / 2/ 2 /3;
-  }
-  .item-info:nth-child(5) {
-    flex:1;
-  }
-  .item-info {
-    display: flex;
-  }
+
+  .downloadBtn { flex:1; }
+  .item-info:nth-child(3) { grid-area: 1 / 2/ 2 /3; }
+  .item-info:nth-child(5) { flex:1; }
+  .item-info { display: flex; }
+  .donation { flex:1;}
+  .slider-container * { padding: 0px!important; }
+  
   }
   @media (max-width: 600px) {
     .downloadBtn {
@@ -195,6 +187,9 @@ tail_includes:
     }
     .item-info {
       display: block!important;
+    }
+    .item-info:nth-child(1) {
+      order:2;
     }
     .item-info:nth-child(5) {
       flex:0;

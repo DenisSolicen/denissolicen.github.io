@@ -1,32 +1,34 @@
 {% if site.donations == true %}
-<div class="donation item-info" style="background-color: rgba(224, 159, 90, 0.37); border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
-    <div style="padding: 0px;">
-      <!-- top-category -->
-      <div id="{{ HEAD_PREFIX }}{{ group_index }}"
-        class="card-header d-flex justify-content-between hide-border-bottom">
-        <div style="font-size: 10px; color:rgb(57, 149, 235)">
-          <a href="https://boosty.to/denissolicen/donate" style="cursor: pointer; font-size: 16px; color:rgb(239, 169, 95);"> Купить печеньку 🍪</a><br>
-          <span style="font-size: 14px; color: rgb(231, 218, 218)">
-            Единоразовое пожертвование
-          </span>
+<div class="donation item-info" style="background-color: rgb(134, 87, 70); border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
+  <div style="padding: 0px;">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:rgb(57, 149, 235)">
+        <a href="https://boosty.to/denissolicen/donate" style="cursor: pointer; font-size: 16px; color:rgb(240 191 155);;"> Купить печеньку 🍪</a><br>
+        <span style="font-size: 14px; color: rgb(231, 218, 218)">
+          Единоразовое пожертвование
+        </span>
 
-        </div>
-      </div> 
-    </div> <!-- .card -->
+      </div>
+    </div> 
+  </div> <!-- .card -->
 </div>
-<div class="donation item-info" style="background-color: rgba(224, 159, 90, 0.37); border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
-    <div style="padding: 0px;">
-      <!-- top-category -->
-      <div id="{{ HEAD_PREFIX }}{{ group_index }}"
-        class="card-header d-flex justify-content-between hide-border-bottom">
-        <div style="font-size: 10px; color:rgb(57, 149, 235)">
-          <a href="https://boosty.to/denissolicen/purchase/754673" style="cursor: pointer; font-size: 16px; color:rgb(239, 169, 95);"> Вечная печенька 🍪</a><br>
-          <span style="font-size: 14px; color: rgb(231, 218, 218)">
-            Оформите подписку от 30 руб.
-          </span>
+{% if include.disableSub == null %}
+<div class="donation item-info" style="background-color: rgb(134, 87, 70); border-radius: 15px; border: 1px solid rgb(44, 45, 45); padding-left: 12px; padding-right: 12px;">
+  <div style="padding: 0px;">
+    <!-- top-category -->
+    <div id="{{ HEAD_PREFIX }}{{ group_index }}"
+      class="card-header d-flex justify-content-between hide-border-bottom">
+      <div style="font-size: 10px; color:rgb(57, 149, 235)">
+        <a href="https://boosty.to/denissolicen/purchase/754673" style="cursor: pointer; font-size: 16px; color:rgb(240 191 155);"> Вечная печенька 🍪</a><br>
+        <span style="font-size: 14px; color: rgb(231, 218, 218)">
+          Оформите подписку от 30 руб.
+        </span>
 
-        </div>
-      </div> 
-    </div> <!-- .card -->
+      </div>
+    </div> 
+  </div> <!-- .card -->
 </div>
+{%endif%}
 {%endif%}

@@ -46,7 +46,8 @@ layout: default
       {% if page.date == null %}
       {% include update-list.html %}
       {% endif %}
-
+      
+      <div style="display: grid; gap:40px;">
       {% include r_sidebar.html %} 
 
         <!-- TOC 
@@ -66,10 +67,10 @@ layout: default
       {% if page.toc == null %}
         {% include trending-tags.html %}
       {% endif %}
-      {% include buyMeCoffee.html %} 
-      
-
-
+        <div style="display: grid; gap:20px">
+          {% include buyMeCoffee.html %} 
+        </div>
+      </div>
     </div>
   </div>
 
