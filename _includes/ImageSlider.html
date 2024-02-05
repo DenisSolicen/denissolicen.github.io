@@ -7,7 +7,7 @@
             {% for image in site.static_files %}
             {% if image.path contains 'assets/img/gallery/' %}
             {% if image.path contains slug %}
-            <img id="slide-{{forloop.index}}" style="scroll-padding-bottom: 200px; scroll-margin-bottom: 2000px;" src="{{ image.path }}" alt="{{page.url}}">
+            <img id="slide-{{forloop.index}}" class="preview-img lazyload" style="scroll-padding-bottom: 200px; scroll-margin-bottom: 2000px;" src="{{ image.path }}" alt="Изображение с сайта {{site.title}} - {{page.title}} - SolicenTEAM - Команда Солицена">
             {% endif %}
             {% endif %}
             {% endfor %}
