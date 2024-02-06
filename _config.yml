@@ -3,7 +3,7 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
-# All of plugins of site
+# All addOn plugins of site
 plugins:
   - jekyll-redirect-from
 

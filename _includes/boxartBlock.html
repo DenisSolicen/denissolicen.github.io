@@ -26,7 +26,7 @@
 
         <!-- posted date -->
          <!--<i class="far fa-calendar fa-fw"></i>  -->
-        {% if post.future %}
+        {% if post.future == true %}
         {% include datetime.html date="TBA" %}
         {% else %}
         {% include datetime.html date=post.date %}
