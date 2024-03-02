@@ -53,7 +53,7 @@ notification:
 # ----- Posts related labels -----
 
 post:
-  written_by: Автор
+  written_by: Автор статьи
   posted: Время публикации
   updated: Обновлено
   words: слов(а)
