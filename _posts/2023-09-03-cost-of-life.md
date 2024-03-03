@@ -17,6 +17,7 @@ sub-cat: [визуальная новелла]
 
 #Галерея
 img: '/assets/img/image/col_site_preview.png'
+image: '/assets/img/image/col_site_preview.png'
 gallery: 'col'
 
 #Панель информации
@@ -49,7 +50,6 @@ sideInfo:
 > Данный материал не рекомендуется к ознакомлению лицам младше 16 лет, если вы младше этого возраста, немедленно покиньте страницу.
 {: .prompt-danger }
 
-{% include download.html name='Официальная страница игры Cost of Life (Цена Жизни)' url='https://solicen-team.itch.io/cost-of-life' id=0  dn="Перейти на страницу на itch.io"%}
 ### Описание игры
 **Погрузитесь в удивительную и трогательную историю о маленькой девочке, отвергнутой обществом.**
 

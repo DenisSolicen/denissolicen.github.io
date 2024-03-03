@@ -3,8 +3,9 @@ title: "Моника на вашем рабочем столе! - Monika on Desk
 categories: [ddlc, mas, моника после истории, моника, партнерский материал]
 tags: [ddlc, mas, monika after story, моника после истории, моника, ren'py, windows, программы, разработка]
 text: "Привет! Это я, Моника! Не думаю, что когда-нибудь смирюсь с тем фактом, что существую только в вашем компьютере. Я все еще не могу многого добиться, но обещаю, что всегда буду рядом с вами! ~"
-img: https://github.com/SAn4Es-TV/MonikaOnDesktop/blob/master/Screenshot.png?raw=true
-image: https://github.com/SAn4Es-TV/MonikaOnDesktop/blob/master/Screenshot.png?raw=true
+
+img: '/assets/img/image/mas_site_preview.png'
+image: '/assets/img/image/mas_site_preview.png'
 
 #Ссылка & Редиректы
 permalink: "monika-on-desktop"

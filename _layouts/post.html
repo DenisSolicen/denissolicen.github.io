@@ -52,7 +52,9 @@ tail_includes:
     <span>
       {{ site.data.locales[site.lang].post.updated }}
       {% include datetime.html date=page.last_modified_at tooltip=true %}
-    </span> {% endif %} {% if page.image %} {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %} {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %} {% capture alt
+    </span> {% endif %} 
+    
+    {% if page.image %} {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %} {% capture class %}class="preview-img{{ ' no-bg' }}"{% endcapture %} {% capture alt
     %}alt="{{ page.image.alt | default: "Preview Image" }}"{% endcapture %} {% capture lqip %} {% if page.image.lqip %} lqip="{{ page.image.lqip }}" {% endif %} {% endcapture %}
 
     <div class="mt-3 mb-3">
@@ -216,6 +218,11 @@ tail_includes:
       .noScreen {
           display: block;
           overflow: hidden;
+      }
+      .preview-img {
+        visibility: hidden;
+        overflow: hidden;
+        display: none;
       }
   }
 </style>
