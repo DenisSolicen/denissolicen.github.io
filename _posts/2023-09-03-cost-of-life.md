@@ -16,7 +16,6 @@ short: "Цена Жизни — Демо версия"
 sub-cat: [визуальная новелла] 
 
 #Галерея
-img: '/assets/img/image/col_site_preview.png'
 image: '/assets/img/image/col_site_preview.png'
 gallery: 'col'
 

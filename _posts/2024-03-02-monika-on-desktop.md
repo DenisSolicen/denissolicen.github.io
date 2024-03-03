@@ -4,7 +4,6 @@ categories: [ddlc, mas, моника после истории, моника, п
 tags: [ddlc, mas, monika after story, моника после истории, моника, ren'py, windows, программы, разработка]
 text: "Привет! Это я, Моника! Не думаю, что когда-нибудь смирюсь с тем фактом, что существую только в вашем компьютере. Я все еще не могу многого добиться, но обещаю, что всегда буду рядом с вами! ~"
 
-img: '/assets/img/image/mas_site_preview.png'
 image: '/assets/img/image/mas_site_preview.png'
 
 #Ссылка & Редиректы

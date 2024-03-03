@@ -3,7 +3,7 @@ title: "Запускаем Android приложения на Windows: - Windows 
 categories: [гайды, Windows Subsystem for Android, Android, Windows]
 tags: [Windows Subsystem for Android, WSA, установка, Android приложения, Windows, руководство, инструкции]
 text: "Эмуляторы более не нужны, установите систему Android нативно в вашу Windows систему и играйте во всё, что хотите, и без ограничений со стороны разработчиков эмуляторов, поддерживаются все APK/APKS приложения."
-img: https://i.playground.ru/p/5i79O4-dmFMric_cZFnk4g.png
+
 image: https://i.playground.ru/p/5i79O4-dmFMric_cZFnk4g.png
 
 #Ссылка & Редиректы
