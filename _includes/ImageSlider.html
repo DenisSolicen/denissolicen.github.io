@@ -7,18 +7,17 @@
             {% for image in site.static_files %}
             {% if image.path contains 'assets/img/gallery/' %}
             {% if image.path contains slug %}
-            <img id="slide-{{forloop.index}}" class="preview-img lazyload" style="scroll-padding-bottom: 200px; scroll-margin-bottom: 2000px;" src="{{ image.path }}" alt="Изображение с сайта {{site.title}} - {{page.title}} - SolicenTEAM - Команда Солицена">
+            <img id="slide-{{forloop.index}}" class="preview-image lazyload" style="scroll-padding-bottom: 200px; scroll-margin-bottom: 2000px;" src="{{ image.path }}" alt="Изображение с сайта {{site.title}} - {{page.title}} - SolicenTEAM - Команда Солицена">
             {% endif %}
             {% endif %}
             {% endfor %}
         </div>
         <div class="slider-nav">
-
             {% assign slug = page.gallery %}
             {% for image in site.static_files %}
             {% if image.path contains 'assets/img/gallery/' %}
             {% if image.path contains slug %}
-            <a href="#slide-{{forloop.index}}" onclick="return false"></a>
+            <a class="glassmorphism" href="#slide-{{forloop.index}}" onclick="return false"></a>
             {% endif %}
             {% endif %}
             {% endfor %}
@@ -73,12 +72,12 @@
         z-index: 1;
     }
     .slider-nav a {
-        border: 2px solid rgb(171, 174, 179);
+        border: 2px solid rgba(171, 174, 179, 0.15);
         width: 0.75rem;
         height: 0.75rem;
         border-radius: 50%;
-        background-color: #ffffff00;
-        opacity: 0.45;
+        background-color: rgba(244,244,244,0.05);
+        opacity: 0.95;
         transition: 0.35s;
     }
     .slider-nav a:hover {

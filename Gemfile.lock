@@ -50,6 +50,8 @@ GEM
       webrick (~> 1.7)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
+    jekyll-include-cache (0.2.1)
+      jekyll (>= 3.7, < 5.0)
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
@@ -121,6 +123,7 @@ DEPENDENCIES
   autoprefixer-rails (= 8.6.5)
   font-awesome-sass (~> 6.5.1)
   html-proofer (~> 3.18)
+  jekyll-include-cache
   jekyll-theme-chirpy (~> 5.3, >= 5.5.2)
   tzinfo (~> 1.2)
   tzinfo-data
