@@ -32,7 +32,7 @@ description: >-                        # used by seo meta and the atom feed
   Содержит архив переводов, статей, и игры созданные участниками Команды или Солиценом.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://solicen.ru'
+url: 'https://denissolicen.github.io'
 
 github:
   username: denissolicen             # change to your github username

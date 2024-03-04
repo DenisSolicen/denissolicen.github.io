@@ -10,6 +10,14 @@ platforms:
    # type: Facebook
    # icon: "fab fa-facebook-square"
    # link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
+  - 
+    type: WhatsApp
+    icon: "fa-brands fa-whatsapp"
+    link: "https://wa.me/?url=URL&text=TITLE"
+  -
+    type: Reddit
+    icon: "fa-brands fa-reddit"
+    link: "https://www.reddit.com/submit?url=URL&title=TITLE"
   -
     type: Telegram
     icon: "fab fa-telegram"
@@ -21,7 +29,7 @@ platforms:
   -
     type: Поддержать
     icon: 'fa-solid fa-heart fa-bounce'
-    link: 'https://www.donationalerts.com/r/solicen'
+    link: 'https://boosty.to/denissolicen/donate'
 
   # Uncomment below if you need to.
   # -
