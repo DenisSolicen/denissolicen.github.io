@@ -3,7 +3,6 @@ layout: default
 ---
 
 {% include assets-origin.html %}
-
 <style>
   li a { color: #999999; font-weight: bold; } 
   blockquote[class^=prompt-info] { background-color: rgba(14, 41, 66, 80%)!important; }
@@ -13,6 +12,11 @@ layout: default
     color: #999999!important; font-weight: bold;
   }
 
+  code.highlighter-rouge {
+    padding: 5px!important;
+    cursor: pointer;
+    color: #999999!important;
+  }
 
   .categories.card { background-color: rgb(34,35,38)!important; }
   .categories .card-header a { color: rgb(109 116 129)!important; }
@@ -83,7 +87,6 @@ layout: default
       {% include nowComment.html %}  
       {%endif%} -->
 
-      
       {% if page.date == null %}
       {% include update-list.html %}
       {% endif %}
