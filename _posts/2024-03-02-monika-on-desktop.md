@@ -20,11 +20,6 @@ sideInfo:
      style: 0
      header: "Помощник:"
      title: "Denis Solicen"
-   modDiscord:
-     style: 1
-     title: "Сервер MoD Community"
-     url:  "https://discord.gg//QZuuAmYBnr"
-     version: Discord
   san4es:
      style: 1
      title: "Разработчик MoD"
