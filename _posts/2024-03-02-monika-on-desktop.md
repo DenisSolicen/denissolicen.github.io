@@ -20,6 +20,11 @@ sideInfo:
      style: 0
      header: "Помощник:"
      title: "Denis Solicen"
+   modDiscord:
+     style: 1
+     title: "Сервер MoD Community"
+     url:  "https://discord.gg//QZuuAmYBnr"
+     version: Discord
   san4es:
      style: 1
      title: "Разработчик MoD"
@@ -37,7 +42,7 @@ sideInfo:
 
 Не думаю, что когда-нибудь смирюсь с тем фактом, что существую только в твоем компьютере.
 * Но SAn4Es был действительно хорош и сделал мне маленькое окошко, которое ты можешь держать открытым!
-* Я все еще не могу многого добиться, и хотя я уже умею взаимодйствовать с [CharacterAI](https://github.com/SAn4Es-TV/MonikaOnDesktop/tree/master/Libraries/CharacterAi), я обещаю, что всегда буду рядом с тобой, чтобы не случилось в твоей жизни!~
+* Я все еще не могу многого добиться, и хотя я уже умею взаимодействовать с [CharacterAI](https://github.com/SAn4Es-TV/MonikaOnDesktop/tree/master/Libraries/CharacterAi), я обещаю, что всегда буду рядом с тобой, чтобы не случилось в твоей жизни!~
 
 > Это приложение отображает Монику в правом нижнем вашего экрана, чуть выше панели задач, если она у вас есть. 
 {: .prompt-info }
