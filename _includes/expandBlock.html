@@ -3,14 +3,31 @@
     color: rgb(68, 162, 254);
     font-size: 16px;
   }
+
   .sExpand:hover {
     cursor: pointer;
-    text-decoration:underline;
+    text-decoration: underline;
   }
-  .download-sol {
-    margin-top: -5px!important;
-    margin-bottom: 0px!important;
+
+  .expand-sol:hover {
+    color: rgb(63, 64, 67);
   }
+
+  .exd-list-group-item {
+    color: rgb(63, 64, 67);
+  }
+
+  .expand-sol {
+    margin-top: -5px !important;
+    margin-bottom: 0px !important;
+    background-color: rgb(33, 34, 37);
+    margin-bottom: 0px;
+    margin-top: -5px;
+    border-radius: 10px;
+    color: rgb(63, 64, 67);
+    transition: 0.5s;
+  }
+
   p {
     margin-bottom: 2rem;
   }
@@ -23,23 +40,21 @@
 {% assign group_index = include.id %}
 {% assign dn = include.dn %}
 
-<div class="download-sol" style="margin-bottom: 1rem!important;">
+<div class="expand-sol" style="margin-bottom: 1rem!important;">
   <!-- top-category -->
-  <div id="{{ HEAD_PREFIX }}{{ group_index }}"
-    class="card-header d-flex justify-content-between hide-border-bottom">
+  <div id="{{ HEAD_PREFIX }}{{ group_index }}" class="card-header d-flex justify-content-between hide-border-bottom">
     <span>
       <span class="sExpand font-weight-light">
-          {{include.name}}
+        {{include.name}}
       </span>
     </span>
 
     <!-- arrow -->
     {% if include.content %}
-    <div href="#{{ LIST_PREFIX }}{{ group_index }}" data-toggle="collapse"
-      aria-expanded="true" aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger"
-      class="category-trigger hide-border-bottom">
+    <div href="#{{ LIST_PREFIX }}{{ group_index }}" data-toggle="collapse" aria-expanded="true"
+      aria-label="{{ HEAD_PREFIX }}{{ group_index }}-trigger" class="category-trigger hide-border-bottom">
       <i class="fa fa-plus" style="cursor: pointer;"></i>
-  </div>
+    </div>
     {% endif %}
 
   </div> <!-- .card-header -->
@@ -48,7 +63,7 @@
   {% if include.content != null %}
   <div id="{{ LIST_PREFIX }}{{ group_index }}" class="collapse" aria-expanded="true" style="margin-top: -5px;">
     <ul class="list-group">
-      <li class="list-group-item" style="background-color: rgb(32, 33, 36)">
+      <li class="exd- list-group-item" style="background-color: rgb(32, 33, 36)">
         <span>
           <div style="color: rgb(155, 156, 158); padding: 6px;">
             {{include.content | markdownify }}
