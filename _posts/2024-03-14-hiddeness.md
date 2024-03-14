@@ -11,7 +11,7 @@ permalink: "/hiddeness-vn"
 short: "«Скрытые»  — Альфа (концепт) версия"
 sub-cat: [визуальная новелла] 
 
-image: "../assets/img/image/hiddeness_logo.png"
+image: "/assets/img/image/hiddeness_logo.png"
 
 #Панель информации
 sideInfo:
