@@ -86,10 +86,14 @@ layout: page
       <img src="{{post.image}}" style="background-size: cover; width: 100%; aspect-ratio: 40 / 21; object-fit: cover;" alt="{{post.url}}">
     </div>
     {% endif %} 
-
     <h1 class="mb-2" style="padding-left: 20px; padding-right: 20px;">
       <a style="color:rgb(201, 204, 207); font-size: 24px; font-weight: 700;" href="{{ post.url | relative_url }}">{{ post.title }}</a>
     </h1>
+    {% if post.titleVideo != null %}
+    <div class="mt-3 mb-3" style="height: auto; overflow: hidden; margin-left: 20px; margin-right: 20px;">
+      {% include embed/youtube.html id=post.titleVideo %}
+    </div>
+    {% endif %}
     <div class="post-content" style="padding-left: 20px; padding-right: 20px; font-size: 17px; line-height: 1.45;">
       <p>
         {% if post.text != null %}
@@ -103,13 +107,6 @@ layout: page
         {% endif %}
       </p>
     </div>
-
-    {% if post.titleVideo != null %}
-    <div class="mt-3 mb-3" style="height: auto; width: 100%; overflow: hidden;">
-      {% include embed/youtube.html id='{{post.titleVideo}}' %}
-    </div>
-    {% endif %}
-
     <div class="post-meta text-muted d-flex" style="padding-left: 20px; padding-right: 20px;">
       <div class="mr-auto">
         
