@@ -26,7 +26,7 @@ sideInfo:
   downloadPC:
      style: 1
      title: "Скачать бесплатно"
-     url:  "../assets/downloads/hiddeness/hiddeness_pc.zip"
+     url:  "/assets/downloads/hiddeness/hiddeness_pc.zip"
      version: PC
 
 # Скрыть пост из общего доступа
