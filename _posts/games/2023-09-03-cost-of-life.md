@@ -7,8 +7,8 @@ text: "Оригинальная новелла от SAn4Es_TV, она расск
 pin: true 
 
 #Ссылка & Редиректы
-permalink: "solicen-development/cost-of-life"
-redirect_from: [/cost-of-life,/posts/cos,/costoflife]
+permalink: "games/cost-of-life"
+redirect_from: [/cost-of-life,/posts/cos,/costoflife, /solicen-development/cost-of-life]
 
 #Страница проекта
 boxart: '/assets/img/boxarts/cos.png'
@@ -24,7 +24,7 @@ sideInfo:
   dev:
      style: 0
      header: "Разработчик"
-     title: "SAn4Es_TV, Solicen Development"
+     title: "SAn4Es_TV"
   publisher:
      style: 0
      header: "Издатель"
