@@ -5,7 +5,7 @@
 {% assign sub_cat = post.tr.cat | default: post.sub_cat %}
 
 
-  <div class="post-preview lazyload" style="padding: 10px;  background-size: cover; ">
+  <div class="post-preview lazyload" style="padding: 10px;  background-size: cover;">
     <div style="overflow: hidden;  border-radius: 10px; cursor: pointer;" class="box-card-div" onclick="location.href='{{post.url}}'" href="{{ post.url | relative_url }}" >
        {% if post.draft %}
        {% else %}

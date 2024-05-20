@@ -51,8 +51,7 @@ layout: default
 
     .box-card-grid {
       display: grid; 
-      grid-template-columns: repeat(auto-fill, 280px); 
-
+      grid-template-columns: repeat(auto-fill, 280px); /* 280px */
       gap: 40px;
       padding-top: 40px;
     }
@@ -67,8 +66,7 @@ layout: default
         grid-template-columns: repeat(auto-fill, 180px); 
         gap: 20px;
         justify-content: center;
-        padding-top: 0px;
-      
+        padding-top: 0px;    
     }
       .box-card-div { height: 220px;}
 
@@ -115,22 +113,23 @@ layout: default
 
   </style>
 </html>
-<div id="post-list" class="box-card-grid">
-{% include boxartBlock.html posts=posts %}
-</div> <!-- #post-list -->
-<h1 class="text" style="color:rgb(201, 204, 207); font-size: 18px; font-weight: 700; margin-top: 50px; ">Переводы в производстве</h1>
-
-{% if future.size > 0 %}
-
-<div id="post-list" class="box-card-grid">
-{% include boxartBlock.html posts=future %}
-</div> <!-- #post-list -->
-{% else %}
 <div>
-  <p class="text" style="color: gray;">Странно! Не найдено никаких проектов.</p>
+  <div id="post-list" class="box-card-grid">
+    {% include boxartBlock.html posts=posts %}
+    </div> <!-- #post-list -->
+    <h1 class="text" style="color:rgb(201, 204, 207); font-size: 24px; font-weight: 900; margin-top: 50px; ">Переводы в производстве</h1>
+    {% if future.size > 0 %}
+    <div id="post-list" class="box-card-grid">
+    {% include boxartBlock.html posts=future %}
+    </div> <!-- #post-list -->
+    {% else %}
+    <div>
+      <p class="text" style="color: gray;">Странно! Не найдено никаких проектов.</p>
+    </div>
+    {% endif %}
+    
+    {% if paginator.total_pages > 0 %}
+      {% include post-paginator.html %}
+    {% endif %}
+    
 </div>
-{% endif %}
-
-{% if paginator.total_pages > 0 %}
-  {% include post-paginator.html %}
-{% endif %}
