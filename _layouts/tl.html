@@ -6,7 +6,6 @@ layout: default
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 {% assign posts = site.posts | where_exp: "item", "item.boxart != null  and item.future == null"%}
 {% assign future = site.posts | where_exp: "item", "item.boxart != null and item.future != false and item.future != null" %}
-
 <!-- Get pinned posts -->
 
 {% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
@@ -123,6 +122,7 @@ layout: default
     {% include boxartBlock.html posts=future %}
     </div> <!-- #post-list -->
     {% else %}
+    
     <div>
       <p class="text" style="color: gray;">Странно! Не найдено никаких проектов.</p>
     </div>

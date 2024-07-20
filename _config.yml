@@ -83,8 +83,8 @@ theme_mode: dark # [light|dark]
 # Notice that once it is assigned, the CDN url
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
-# e.g. 'https://cdn.com'
-img_cdn: "https://raw.githubusercontent.com/DenisSolicen/denissolicen.github.io/main/"
+# e.g. 'https://cdn.com' # "https://raw.githubusercontent.com/DenisSolicen/denissolicen.github.io/main/"
+img_cdn: 
 
 # the avatar on sidebar, support local or CORS resources
 avatar: 'assets/img/favicons/ava.jpg'
