@@ -9,8 +9,9 @@ permalink: "/contact-with-us"
 
 {% include expandBlock.html name='Сообщества "Команда Солицена"' content='
 [Discord](https://discord.gg/MT76D7r9Fc) - наше основное сообщество. Все члены "Команды" сидят именно тут. 
-<br> [VK](https://vk.com/solicent) - заброшенное сообщество. Для активности ему требуется модератор-администратор. Если вам интересно, посмотрите **вакансии**.
-<br> [Telegram](https://t.me/dsolicen) - сообщество "Каморка Солицена" в телеграмме, существует как средство последней связи с Солиценом, если с другими, что-то случилось. 
+<br> [VK](https://vk.com/solicent) - сообщество вконтакте. Здесь вы найдете новости переводов, особые посты и связь с аудиторией.
+<br> [Telegram](https://t.me/dsolicen) - сообщество "Каморка Солицена" в телеграмме, получайте новости самыми первыми, изначально существует как средство последней связи с Солиценом, если с другими, что-то случилось. 
+<br> [GitHub](https://github.com/SolicenTEAM) - официальный аккаунт в котором публикуются различные проекты разработанные участниками, от переводчиков для переводчиков.
 ' id=0 %}
 
 {% include expandBlock.html name='Контакт с Денисом Солиценом' content='
@@ -37,11 +38,5 @@ permalink: "/contact-with-us"
 {: .prompt-danger }
 ' id=2 %}
 
-{% include expandBlock.html name='Верстка и дизайн' content='
-* Изначальная тема: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
-* Доработка темы и пере-верстка: [Denis Solicen](https://twitter.com/DenisSolicen)
-* Новые компоненты и элементы: [Denis Solicen](https://twitter.com/DenisSolicen)
-* Модуль подсчета Disqus: [Denis Solicen](https://twitter.com/DenisSolicen)
-' id=3 %}
 
 
