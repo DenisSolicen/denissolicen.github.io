@@ -2,6 +2,7 @@
 title: "Silent Still Русификатор (текст)"
 categories: [перевод, unity, unity3d]
 tags: [unity, перевод unity, unity3d engine, русификатор, русский язык, перевод на русский]
+text: "Перевод на русский (русификатор) для игры Silent Still. Литературный русский перевод, содержит перевод всего текста в игре."
 
 #Ссылка & Редиректы
 permalink: "/silentstill"

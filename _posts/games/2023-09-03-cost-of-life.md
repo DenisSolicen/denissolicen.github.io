@@ -10,7 +10,7 @@ permalink: "games/cost-of-life"
 redirect_from: [/cost-of-life,/posts/cos,/costoflife, /solicen-development/cost-of-life]
 
 #Страница проекта
-boxart: '/assets/img/boxarts/cos.png'
+# boxart: '/assets/img/boxarts/cos.png'
 short: "Цена Жизни — Демо версия"
 sub-cat: [визуальная новелла] 
 
