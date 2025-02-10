@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Checkout | Проверки
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
           # submodules: true
@@ -58,7 +58,7 @@ jobs:
      #     bundle exec htmlproofer _site --disable-external --check-html --allow_missing_href --allow_hash_href --empty_alt_ignore
 
       - name: Upload site artifact | Загрузка осколков
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
