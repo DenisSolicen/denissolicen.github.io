@@ -58,7 +58,7 @@ jobs:
      #     bundle exec htmlproofer _site --disable-external --check-html --allow_missing_href --allow_hash_href --empty_alt_ignore
 
       - name: Upload site artifact | Загрузка осколков
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
