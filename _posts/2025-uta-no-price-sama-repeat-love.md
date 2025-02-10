@@ -1,6 +1,6 @@
 ---
 title: "Uta no Price Repeat LOVE Русификатор (текст)"
-categories: [перевод, поющий принц, uta no price]
+categories: [перевод, поющий принц, uta no price, nintendo switch]
 tags: [ue4, визуальная новелла, роман, visualnovel]
 
 #Ссылка & Редиректы
