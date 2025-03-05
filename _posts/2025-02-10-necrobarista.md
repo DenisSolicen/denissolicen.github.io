@@ -1,7 +1,7 @@
 ---
-title: "Некробариста: Последний глоток"
+title: "Necrobarista Реворк (Полный перевод)"
 categories: [перевод, unity, windows, nintendo switch]
-tags: [unity, necrobarista, перевод unity, unity engine, necrobarista русификатор, necrobarista русский язык, necrobarista русский, necrobarista перевод на русский, necrobarista перевод, necrobarista русификатор]
+tags: [unity, necrobarista, перевод unity, unity engine, necrobarista русификатор, necrobarista русский язык, necrobarista русский, necrobarista перевод на русский, necrobarista перевод, necrobarista русификатор, necrobarista реворк, реворк русского перевода, некробариста реворк]
 text: "Перевод на русский (русификатор) для игры Некробариста: Последний глоток. Исправление и улучшение уже существующей русской оригинальной локализации игры. Возвращает потерянные шрифты, строки, и предоставляет полный перевод игры, включая изображения, и текст."
 
 #Ссылка & Редиректы
@@ -13,24 +13,30 @@ sub-cat: [новелла, мистика]
 
 image: "/assets/img/image/necro.png"
 gallery: 'necro'
+pin: true
 
 sideInfo:
   dev:
      style: 0
      header: "Переводчики"
-     title: "Denis Solicen, SAn4Es-TV"
-  tr:
+     title: "Denis Solicen, SAn4Es-TV, Urahara"
+  switch:
      style: 1
      title: "Скачать бесплатно"
-     url:  "https://discord.gg/MT76D7r9Fc"
-     version: "Discord"
+     url:  "https://drive.google.com/drive/folders/106l4HnjpUE5WqnZKzV6Y76WE1CGHpAmj"
+     version: "Switch"
+  steam:
+     style: 1
+     title: "Скачать бесплатно"
+     url:  "https://drive.google.com/drive/folders/106l4HnjpUE5WqnZKzV6Y76WE1CGHpAmj"
+     version: "Steam"
 ---
 > Платформы проекта перевода: **Steam (1.0.8p2)**,**Nintendo Switch**
 {: .prompt-info }
-> Данный перевод еще не готов, следите за новостями в нашем [Discord](https://discord.gg/MT76D7r9Fc).
+> Данный перевод еще не полностью завершен, следите за новостями в нашем [Discord](https://discord.gg/MT76D7r9Fc).
 {: .prompt-warning }
 ## Информация о переводе
-Перевод группы: «Команда Солицена» заменяет **французскую локализацию** игры на исправленный русский перевод, что необходимо для работы всех шрифтов в игре.
+Перевод группы: «Команда Солицена» заменяет оригинальную **русскую локализацию** игры на исправленный русский перевод, что необходимо для работы всех шрифтов в игре.
 
 Мод делает процесс игры более утонченным и визуально приятным, возвращая разнообразие шрифтов и их лаконичное использование по мере игры, как и на других языках. 
 
@@ -44,11 +50,16 @@ sideInfo:
 3. Можно запускать игру!
 
 ## Команда перевода
-* Перевод и редактура текста - **Denis Solicen**, **SAn4Es-TV**
+* Перевод и редактура текста - **Denis Solicen**, **SAn4Es-TV**, **Urahara**
 * Техническая часть -  **Denis Solicen**, **SAn4Es-TV**
 * Работа со шрифтами -  **Denis Solicen**
+* Подготовка релиза для Steam и Switch - **Denis Solicen**
 
 ### Журнал изменений
+Версия 1.0 от **05.03.2025**
+* Первый публичный релиз для Steam и Nintendo Switch.
+* Редактура проведена вплоть до **Эпизода 5**.
+
 Версия 0.1-alpha от **10.02.2025**
 * Начато закрытое внутреннее тестирование перевода.
 * Проведена редактура начала игры до **Главы I**.
